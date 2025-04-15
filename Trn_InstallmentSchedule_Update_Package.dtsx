@@ -1,0 +1,1729 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/27/2025 12:35:10 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-BVOS04BH"
+  DTS:CreatorName="LAPTOP-BVOS04BH\digvi"
+  DTS:DTSID="{36E8EC59-1771-4D82-B478-AFE6ECA49003}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{1B2E72AF-90F7-4F66-AE36-DD326D674050}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{AC5B931D-1C56-4878-9EF1-2384C23B88BF}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LogId">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{676123BC-AFE6-480F-89CA-4D6C4AB4D3C0}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Variable1">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{44BAD26F-D9F3-4ADC-9A0B-3EB60B0ADDD1}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="YesterdayDate">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\End Log for ETL Execution"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{8a221105-bcc1-46fc-8378-6c871de1c5cd}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="End Log for ETL Execution"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
+          SQLTask:SqlStatementSource="UPDATE dbo.ETL_Execution_Log  &#xA;SET ExecutionEndTime = GETDATE(), Status = 'Success'  &#xA;WHERE LogId = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::LogId"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract and Load Data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{c2b2a55a-334a-4bc0-865a-5a9caa87e7cc}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract and Load Data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract and Load Data.EventHandlers[OnError]"
+          DTS:CreationName="OnError"
+          DTS:DTSID="{704f4e24-c403-4520-84f9-e12655a3960c}"
+          DTS:EventID="-494229152"
+          DTS:EventName="OnError"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{ac0e5735-e2b1-449d-8642-9a2ae1351b51}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Extract and Load Data.EventHandlers[OnError]\Error Log for ETL Execution"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{cd5123af-795f-419e-b22a-39fa311a4db8}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Error Log for ETL Execution"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
+                  SQLTask:SqlStatementSource="UPDATE dbo.ETL_Execution_Log  &#xA;SET ExecutionEndTime = GETDATE(), Status = 'Failed', ErrorMessage = ?  &#xA;WHERE LogId = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="0"
+                    SQLTask:DtsVariableName="User::LogId"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract and Load Data\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Trn_InstallmentSchedule]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Trn_InstallmentSchedule]) [refTable]
+where [refTable].[InstallScheduleId] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="InstallScheduleId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Attendance" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="BranchId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DisbursementId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CustomerInfoId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CenterId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="InstallmentId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ScheduleDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PrincipleAmt" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="InterestAmt" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PrincipleCollected" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="InterestCollected" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsPreSettlement" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PreSettlementAmt" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsDeleted" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ModeOfPayment" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InstallScheduleId]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract and Load Data\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[172.17.130.207.Sonata_Connect.Paymee_DigvijayS Destination]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract and Load Data\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract and Load Data\Lookup.Inputs[Lookup Input].Columns[InstallScheduleId]"
+                      cachedDataType="i4"
+                      cachedName="InstallScheduleId"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InstallScheduleId]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">InstallScheduleId</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Extract and Load Data\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[InstallScheduleId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[InstallScheduleId]"
+                      name="InstallScheduleId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">InstallScheduleId</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract and Load Data\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Extract and Load Data\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Extract and Load Data\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract and Load Data\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Trn_InstallmentSchedule]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT Ist.*  
+FROM Sonata_Dec.dbo.Trn_LoanDisbursement LD  
+JOIN Sonata_Dec.dbo.Trn_InstallmentSchedule Ist  
+    ON Ist.BranchID = LD.BranchID  
+    AND Ist.DisbursementId = LD.DisbursementID
+WHERE Ist.IsDeleted = 0  
+    AND CONVERT(DATE, LD.DisbursementDate) = CONVERT(DATE, DATEADD(DAY, -1, GETDATE()))  
+ORDER BY Ist.BranchId, Ist.DisbursementId, Ist.InstallmentId;</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract and Load Data\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="{76B4EB6B-C839-4138-AA4D-A2557E66B45C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[172.17.130.207.Paymee_DigvijayS Source]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedBy]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CreatedBy]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedBy]"
+                      name="CreatedBy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedBy]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdatedBy]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedBy]"
+                      name="UpdatedBy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InstallScheduleId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InstallScheduleId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InstallScheduleId]"
+                      name="InstallScheduleId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Attendance]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Attendance]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Attendance]"
+                      name="Attendance"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BranchId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchId]"
+                      name="BranchId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisbursementId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DisbursementId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisbursementId]"
+                      name="DisbursementId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerInfoId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustomerInfoId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerInfoId]"
+                      name="CustomerInfoId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CenterId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CenterId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CenterId]"
+                      name="CenterId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InstallmentId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InstallmentId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InstallmentId]"
+                      name="InstallmentId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ScheduleDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ScheduleDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ScheduleDate]"
+                      name="ScheduleDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PrincipleAmt]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PrincipleAmt]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PrincipleAmt]"
+                      name="PrincipleAmt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InterestAmt]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InterestAmt]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InterestAmt]"
+                      name="InterestAmt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PincipalOS]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PincipalOS]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PincipalOS]"
+                      name="PincipalOS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InterestOS]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InterestOS]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InterestOS]"
+                      name="InterestOS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PrincipleCollected]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PrincipleCollected]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PrincipleCollected]"
+                      name="PrincipleCollected"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InterestCollected]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InterestCollected]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InterestCollected]"
+                      name="InterestCollected"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsPreSettlement]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsPreSettlement]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsPreSettlement]"
+                      name="IsPreSettlement"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PreSettlementAmt]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PreSettlementAmt]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PreSettlementAmt]"
+                      name="PreSettlementAmt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsDeleted]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsDeleted]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsDeleted]"
+                      name="IsDeleted"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollectedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CollectedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollectedDate]"
+                      name="CollectedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PenaltyAmount]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PenaltyAmount]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PenaltyAmount]"
+                      name="PenaltyAmount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PrincipalArrear]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PrincipalArrear]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PrincipalArrear]"
+                      name="PrincipalArrear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InterestArrear]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InterestArrear]"
+                      length="10"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InterestArrear]"
+                      name="InterestArrear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsWriteOff]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsWriteOff]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsWriteOff]"
+                      name="IsWriteOff"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[AccountId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AccountId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[AccountId]"
+                      name="AccountId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PartialCollectedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PartialCollectedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PartialCollectedDate]"
+                      name="PartialCollectedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[NACHStatus]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NACHStatus]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[NACHStatus]"
+                      name="NACHStatus"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ModeOfPayment]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ModeOfPayment]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ModeOfPayment]"
+                      name="ModeOfPayment"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DPDFlag]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DPDFlag]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DPDFlag]"
+                      name="DPDFlag"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DPDDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DPDDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DPDDate]"
+                      name="DPDDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DPDPrinciplePaid]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DPDPrinciplePaid]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DPDPrinciplePaid]"
+                      name="DPDPrinciplePaid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DPDInterestPaid]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DPDInterestPaid]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DPDInterestPaid]"
+                      name="DPDInterestPaid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[OLDSCHEDULEDATE]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OLDSCHEDULEDATE]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[OLDSCHEDULEDATE]"
+                      name="OLDSCHEDULEDATE"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CreatedBy]"
+                      dataType="i4"
+                      name="CreatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdatedBy]"
+                      dataType="i4"
+                      name="UpdatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InstallScheduleId]"
+                      dataType="i4"
+                      name="InstallScheduleId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Attendance]"
+                      dataType="bool"
+                      name="Attendance" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BranchId]"
+                      dataType="i4"
+                      name="BranchId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DisbursementId]"
+                      dataType="i4"
+                      name="DisbursementId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustomerInfoId]"
+                      dataType="i4"
+                      name="CustomerInfoId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CenterId]"
+                      dataType="i4"
+                      name="CenterId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InstallmentId]"
+                      dataType="i4"
+                      name="InstallmentId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ScheduleDate]"
+                      dataType="dbTimeStamp"
+                      name="ScheduleDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PrincipleAmt]"
+                      dataType="cy"
+                      name="PrincipleAmt" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InterestAmt]"
+                      dataType="cy"
+                      name="InterestAmt" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PincipalOS]"
+                      dataType="cy"
+                      name="PincipalOS" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InterestOS]"
+                      dataType="cy"
+                      name="InterestOS" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PrincipleCollected]"
+                      dataType="cy"
+                      name="PrincipleCollected" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InterestCollected]"
+                      dataType="cy"
+                      name="InterestCollected" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsPreSettlement]"
+                      dataType="bool"
+                      name="IsPreSettlement" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PreSettlementAmt]"
+                      dataType="cy"
+                      name="PreSettlementAmt" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsDeleted]"
+                      dataType="bool"
+                      name="IsDeleted" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CollectedDate]"
+                      dataType="dbTimeStamp"
+                      name="CollectedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PenaltyAmount]"
+                      dataType="cy"
+                      name="PenaltyAmount" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PrincipalArrear]"
+                      dataType="cy"
+                      name="PrincipalArrear" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InterestArrear]"
+                      dataType="wstr"
+                      length="10"
+                      name="InterestArrear" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsWriteOff]"
+                      dataType="bool"
+                      name="IsWriteOff" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AccountId]"
+                      dataType="i4"
+                      name="AccountId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PartialCollectedDate]"
+                      dataType="dbTimeStamp"
+                      name="PartialCollectedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NACHStatus]"
+                      dataType="i4"
+                      name="NACHStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ModeOfPayment]"
+                      dataType="i4"
+                      name="ModeOfPayment" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DPDFlag]"
+                      dataType="bool"
+                      name="DPDFlag" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DPDDate]"
+                      dataType="dbTimeStamp"
+                      name="DPDDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DPDPrinciplePaid]"
+                      dataType="cy"
+                      name="DPDPrinciplePaid" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DPDInterestPaid]"
+                      dataType="cy"
+                      name="DPDInterestPaid" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OLDSCHEDULEDATE]"
+                      dataType="dbDate"
+                      name="OLDSCHEDULEDATE" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InstallScheduleId]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InstallScheduleId]"
+                      name="InstallScheduleId" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Attendance]"
+                      dataType="bool"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Attendance]"
+                      name="Attendance" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BranchId]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BranchId]"
+                      name="BranchId" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DisbursementId]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DisbursementId]"
+                      name="DisbursementId" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustomerInfoId]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustomerInfoId]"
+                      name="CustomerInfoId" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CenterId]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CenterId]"
+                      name="CenterId" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InstallmentId]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InstallmentId]"
+                      name="InstallmentId" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ScheduleDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ScheduleDate]"
+                      name="ScheduleDate" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PrincipleAmt]"
+                      dataType="cy"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PrincipleAmt]"
+                      name="PrincipleAmt" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InterestAmt]"
+                      dataType="cy"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InterestAmt]"
+                      name="InterestAmt" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PincipalOS]"
+                      dataType="cy"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PincipalOS]"
+                      name="PincipalOS" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InterestOS]"
+                      dataType="cy"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InterestOS]"
+                      name="InterestOS" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PrincipleCollected]"
+                      dataType="cy"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PrincipleCollected]"
+                      name="PrincipleCollected" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InterestCollected]"
+                      dataType="cy"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InterestCollected]"
+                      name="InterestCollected" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsPreSettlement]"
+                      dataType="bool"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsPreSettlement]"
+                      name="IsPreSettlement" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PreSettlementAmt]"
+                      dataType="cy"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PreSettlementAmt]"
+                      name="PreSettlementAmt" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsDeleted]"
+                      dataType="bool"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsDeleted]"
+                      name="IsDeleted" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CreatedDate]"
+                      name="CreatedDate" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
+                      name="UpdatedDate" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CreatedBy]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CreatedBy]"
+                      name="CreatedBy" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UpdatedBy]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UpdatedBy]"
+                      name="UpdatedBy" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CollectedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CollectedDate]"
+                      name="CollectedDate" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PenaltyAmount]"
+                      dataType="cy"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PenaltyAmount]"
+                      name="PenaltyAmount" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PrincipalArrear]"
+                      dataType="cy"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PrincipalArrear]"
+                      name="PrincipalArrear" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InterestArrear]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InterestArrear]"
+                      name="InterestArrear" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsWriteOff]"
+                      dataType="bool"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsWriteOff]"
+                      name="IsWriteOff" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AccountId]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AccountId]"
+                      name="AccountId" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PartialCollectedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PartialCollectedDate]"
+                      name="PartialCollectedDate" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NACHStatus]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NACHStatus]"
+                      name="NACHStatus" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ModeOfPayment]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ModeOfPayment]"
+                      name="ModeOfPayment" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DPDFlag]"
+                      dataType="bool"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DPDFlag]"
+                      name="DPDFlag" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DPDDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DPDDate]"
+                      name="DPDDate" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DPDPrinciplePaid]"
+                      dataType="cy"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DPDPrinciplePaid]"
+                      name="DPDPrinciplePaid" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DPDInterestPaid]"
+                      dataType="cy"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DPDInterestPaid]"
+                      name="DPDInterestPaid" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OLDSCHEDULEDATE]"
+                      dataType="dbDate"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OLDSCHEDULEDATE]"
+                      name="OLDSCHEDULEDATE" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract and Load Data\OLE DB Staging"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Staging"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Staging_Trn_InstallmentSchedule]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract and Load Data\OLE DB Staging.Connections[OleDbConnection]"
+                  connectionManagerID="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[172.17.130.207.Sonata_Connect.Paymee_DigvijayS Destination]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[InstallScheduleId]"
+                      cachedDataType="i4"
+                      cachedName="InstallScheduleId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InstallScheduleId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InstallScheduleId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[Attendance]"
+                      cachedDataType="bool"
+                      cachedName="Attendance"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[Attendance]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Attendance]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[BranchId]"
+                      cachedDataType="i4"
+                      cachedName="BranchId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BranchId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[DisbursementId]"
+                      cachedDataType="i4"
+                      cachedName="DisbursementId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisbursementId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisbursementId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CustomerInfoId]"
+                      cachedDataType="i4"
+                      cachedName="CustomerInfoId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CustomerInfoId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerInfoId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CenterId]"
+                      cachedDataType="i4"
+                      cachedName="CenterId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CenterId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CenterId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[InstallmentId]"
+                      cachedDataType="i4"
+                      cachedName="InstallmentId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InstallmentId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InstallmentId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[ScheduleDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ScheduleDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ScheduleDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ScheduleDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[PrincipleAmt]"
+                      cachedDataType="cy"
+                      cachedName="PrincipleAmt"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[PrincipleAmt]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PrincipleAmt]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[InterestAmt]"
+                      cachedDataType="cy"
+                      cachedName="InterestAmt"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InterestAmt]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InterestAmt]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[PrincipleCollected]"
+                      cachedDataType="cy"
+                      cachedName="PrincipleCollected"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[PrincipleCollected]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PrincipleCollected]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[InterestCollected]"
+                      cachedDataType="cy"
+                      cachedName="InterestCollected"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InterestCollected]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InterestCollected]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[IsPreSettlement]"
+                      cachedDataType="bool"
+                      cachedName="IsPreSettlement"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsPreSettlement]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsPreSettlement]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[PreSettlementAmt]"
+                      cachedDataType="cy"
+                      cachedName="PreSettlementAmt"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[PreSettlementAmt]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PreSettlementAmt]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[IsDeleted]"
+                      cachedDataType="bool"
+                      cachedName="IsDeleted"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsDeleted]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsDeleted]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[ModeOfPayment]"
+                      cachedDataType="i4"
+                      cachedName="ModeOfPayment"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ModeOfPayment]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ModeOfPayment]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InstallScheduleId]"
+                      dataType="i4"
+                      name="InstallScheduleId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[Attendance]"
+                      dataType="bool"
+                      name="Attendance" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BranchId]"
+                      dataType="i4"
+                      name="BranchId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisbursementId]"
+                      dataType="i4"
+                      name="DisbursementId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CustomerInfoId]"
+                      dataType="i4"
+                      name="CustomerInfoId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CenterId]"
+                      dataType="i4"
+                      name="CenterId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InstallmentId]"
+                      dataType="i4"
+                      name="InstallmentId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ScheduleDate]"
+                      dataType="dbTimeStamp"
+                      name="ScheduleDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[PrincipleAmt]"
+                      dataType="cy"
+                      name="PrincipleAmt" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InterestAmt]"
+                      dataType="cy"
+                      name="InterestAmt" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[PrincipleCollected]"
+                      dataType="cy"
+                      name="PrincipleCollected" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InterestCollected]"
+                      dataType="cy"
+                      name="InterestCollected" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsPreSettlement]"
+                      dataType="bool"
+                      name="IsPreSettlement" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[PreSettlementAmt]"
+                      dataType="cy"
+                      name="PreSettlementAmt" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsDeleted]"
+                      dataType="bool"
+                      name="IsDeleted" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ModeOfPayment]"
+                      dataType="i4"
+                      name="ModeOfPayment" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract and Load Data\OLE DB Staging.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract and Load Data.Paths[Lookup Match Output]"
+              endId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Extract and Load Data.Paths[OLE DB Source Output]"
+              endId="Package\Extract and Load Data\Lookup.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Inner Join Staging to Destination"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{662c8404-a8ac-4fdb-a807-6fd9587acf23}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Inner Join Staging to Destination"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
+          SQLTask:SqlStatementSource="&#xA;UPDATE T  &#xA;SET T.PrincipleCollected = S.PrincipleCollected,  &#xA;    T.InterestCollected = S.InterestCollected,  &#xA;    T.ModeOfPayment = S.ModeOfPayment&#xA;FROM  [dbo].[Trn_InstallmentSchedule]T  &#xA;JOIN [dbo].[Staging_Trn_InstallmentSchedule] S  &#xA;    ON T.InstallScheduleId= S.InstallScheduleId ;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Start Log for ETL Execution"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{b080a899-1b6e-48b0-997a-72ebef1f8d23}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Start Log for ETL Execution"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
+          SQLTask:SqlStatementSource="INSERT INTO dbo.ETL_Execution_Log (PackageName, Status)  &#xA;VALUES ('ETL_Upsert_Trn_InstallmentSchedule_Update_Package', 'Running');&#xA;SELECT SCOPE_IDENTITY();"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::LogId" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Staging Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Clear Staging Table"
+      DTS:DTSID="{a9af2c02-8129-43b4-bd82-c73c11d21a8a}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Staging Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Staging_Trn_InstallmentSchedule;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\YesterdayDate"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{008956bd-4427-4fdb-8be8-a5d11df15887}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="YesterdayDate"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
+          SQLTask:SqlStatementSource="SELECT CONVERT(VARCHAR, DATEADD(DAY, -1, GETDATE()), 23) AS YesterdayDate"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="YesterdayDate"
+            SQLTask:DtsVariableName="User::YesterdayDate" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{693fc023-603c-49a2-9664-47463b2189ec}"
+      DTS:From="Package\Truncate Staging Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Extract and Load Data" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{BE540156-5E0E-4BAF-984E-DA01AAB8613E}"
+      DTS:From="Package\Extract and Load Data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Inner Join Staging to Destination" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{b80b3654-d686-420d-8b5e-9080aa13df36}"
+      DTS:From="Package\Start Log for ETL Execution"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Truncate Staging Table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{BB70DF5B-B59F-4C1C-AA47-ACF98D7F4CBA}"
+      DTS:From="Package\Inner Join Staging to Destination"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\End Log for ETL Execution" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{3931ef75-7f3e-4dda-a7ad-af394eee7ea4}"
+      DTS:From="Package\YesterdayDate"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Start Log for ETL Execution" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{9DA55FD8-A059-4600-BFB1-02BBC4DB5122}"
+      DTS:EventID="0"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{FE8BF16D-488A-43F6-BED2-4F3828453B87}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Error Log for ETL Execution"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{655b7125-bf01-4638-a232-8afb952a216c}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Error Log for ETL Execution"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
+              SQLTask:SqlStatementSource="UPDATE dbo.ETL_Execution_Log  &#xA;SET ExecutionEndTime = GETDATE(), Status = 'Failed', ErrorMessage = ?  &#xA;WHERE LogId = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::LogId"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="202.4,41.6"
+          Id="Package\End Log for ETL Execution"
+          TopLeft="64.527777830897,461.199996564786" />
+        <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\Extract and Load Data"
+          TopLeft="75.694443586937,290.62221813713" />
+        <NodeLayout
+          Size="228.8,41.6"
+          Id="Package\Inner Join Staging to Destination"
+          TopLeft="55.8333302827346,368.999997884631" />
+        <NodeLayout
+          Size="205.6,41.6"
+          Id="Package\Start Log for ETL Execution"
+          TopLeft="60,139.388885855454" />
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\Truncate Staging Table"
+          TopLeft="68.694444269907,218.988885340172" />
+        <NodeLayout
+          Size="147.2,41.6"
+          Id="Package\YesterdayDate"
+          TopLeft="93.19444263078,60" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="164.194443928422,260.588885340172">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.0333327969579"
+              Start="0,0"
+              End="0,22.5333327969579">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5333327969579" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="168.363886934836,332.22221813713">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.7777797475012"
+              Start="0,0"
+              End="0,29.2777797475012">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.2777797475012" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="164.547222134954,180.988885855454">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.9999994847179"
+              Start="0,0"
+              End="0,30.4999994847179">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.4999994847179" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="167.980554056816,410.599997884631">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.5999986801543"
+              Start="0,0"
+              End="0,43.0999986801543">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.0999986801543" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="164.79722131539,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.7888858554539"
+              Start="0,0"
+              End="0,30.2888858554539">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.2888858554539" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="207.2,41.6"
+          Id="Package.EventHandlers[OnError]\Error Log for ETL Execution"
+          TopLeft="383.999995172024,167.999998390675" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\Extract and Load Data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Extract and Load Data\OLE DB Staging"
+          TopLeft="399.166644857162,234.866665033433" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Extract and Load Data\OLE DB Source"
+          TopLeft="389.833329279389,38.5999993421634" />
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\Extract and Load Data\Lookup"
+          TopLeft="414.666644310786,131.166665792797" />
+        <EdgeLayout
+          Id="Package\Extract and Load Data.Paths[OLE DB Source Output]"
+          TopLeft="468.449986795088,80.1999993421634">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.9666664506336"
+              Start="0,0"
+              End="0,43.4666664506336">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.4666664506336" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract and Load Data.Paths[Lookup Match Output]"
+          TopLeft="473.716644583974,172.766665792797">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62.099999240636"
+              Start="0,0"
+              End="0,54.599999240636">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.599999240636" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,21.495312120318,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract and Load Data.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="207.2,41.6"
+          Id="Package\Extract and Load Data.EventHandlers[OnError]\Error Log for ETL Execution"
+          TopLeft="389.999995082617,174.999998286366" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract and Load Data\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract and Load Data\OLE DB Staging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
