@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Mst_Center_Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{AA192BCA-005B-409D-A671-7C42C749954D}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{C940C61E-3344-4245-9FD1-786E40937C4F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -164,7 +164,7 @@ where [refTable].[CenterId] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CenterId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="BranchId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StaffId_Recg" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Centercode" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CenterName" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CenterMeetingDay" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CenterMeetingTime" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Village" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="PostalCode" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="IsActive" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CenterId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="BranchId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StaffId_Org" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CRTId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StaffId_Recg" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Centercode" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CenterName" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Block" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FormationDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CenterMeetingDay" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CenterMeetingTime" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ReportingDay" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DissolvedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Address" dataType="DT_STR" length="500" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Village" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="PostalCode" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="LandMark" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="LocationStatus" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsActive" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedBy" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedBy" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EntryDetails" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ProcessDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NewEmpId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FinalTransfer" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="OldStaffID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -232,6 +232,402 @@ where [refTable].[CenterId] = ?</property>
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
                           name="CopyFromReferenceColumn">CenterId</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[BranchId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[BranchId]"
+                      name="BranchId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">BranchId</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[StaffId_Org]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[StaffId_Org]"
+                      name="StaffId_Org"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">StaffId_Org</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CRTId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CRTId]"
+                      name="CRTId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CRTId</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[StaffId_Recg]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[StaffId_Recg]"
+                      name="StaffId_Recg"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">StaffId_Recg</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[Centercode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="30"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[Centercode]"
+                      name="Centercode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Centercode</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CenterName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="100"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CenterName]"
+                      name="CenterName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CenterName</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[Block]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="100"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[Block]"
+                      name="Block"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Block</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[FormationDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[FormationDate]"
+                      name="FormationDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">FormationDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CenterMeetingDay]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CenterMeetingDay]"
+                      name="CenterMeetingDay"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CenterMeetingDay</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CenterMeetingTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CenterMeetingTime]"
+                      name="CenterMeetingTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CenterMeetingTime</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ReportingDay]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ReportingDay]"
+                      name="ReportingDay"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ReportingDay</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[DissolvedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[DissolvedDate]"
+                      name="DissolvedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DissolvedDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[Address]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="500"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[Address]"
+                      name="Address"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Address</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[Village]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="100"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[Village]"
+                      name="Village"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Village</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[PostalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="10"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[PostalCode]"
+                      name="PostalCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">PostalCode</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[LandMark]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="200"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[LandMark]"
+                      name="LandMark"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">LandMark</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[LocationStatus]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[LocationStatus]"
+                      name="LocationStatus"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">LocationStatus</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IsActive]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IsActive]"
+                      name="IsActive"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IsActive</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CreatedDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">UpdatedDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CreatedBy]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CreatedBy]"
+                      name="CreatedBy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CreatedBy</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[UpdatedBy]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[UpdatedBy]"
+                      name="UpdatedBy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">UpdatedBy</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[EntryDetails]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="10"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[EntryDetails]"
+                      name="EntryDetails"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">EntryDetails</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ProcessDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ProcessDate]"
+                      name="ProcessDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ProcessDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[NewEmpId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[NewEmpId]"
+                      name="NewEmpId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">NewEmpId</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[FinalTransfer]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="10"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[FinalTransfer]"
+                      name="FinalTransfer"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">FinalTransfer</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[OldStaffID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[OldStaffID]"
+                      name="OldStaffID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">OldStaffID</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -350,23 +746,11 @@ where [refTable].[CenterId] = ?</property>
                       externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PostalCode]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CenterId]"
-                      cachedDataType="i4"
-                      cachedName="CenterId"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CenterId]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CenterId]" />
-                    <inputColumn
                       refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BranchId]"
                       cachedDataType="i4"
                       cachedName="BranchId"
                       externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BranchId]"
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchId]" />
-                    <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StaffId_Org]"
-                      cachedDataType="i4"
-                      cachedName="StaffId_Org"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StaffId_Recg]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[StaffId_Org]" />
                     <inputColumn
                       refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Centercode]"
                       cachedCodepage="1252"
@@ -409,6 +793,130 @@ where [refTable].[CenterId] = ?</property>
                       cachedName="IsActive"
                       externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsActive]"
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsActive]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UpdatedBy]"
+                      cachedDataType="i4"
+                      cachedName="UpdatedBy"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedBy]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedBy]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ReportingDay]"
+                      cachedDataType="i4"
+                      cachedName="ReportingDay"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReportingDay]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ReportingDay]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProcessDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ProcessDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProcessDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OldStaffID]"
+                      cachedDataType="i4"
+                      cachedName="OldStaffID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OldStaffID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[OldStaffID]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NewEmpId]"
+                      cachedDataType="i4"
+                      cachedName="NewEmpId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NewEmpId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[NewEmpId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LocationStatus]"
+                      cachedDataType="i4"
+                      cachedName="LocationStatus"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LocationStatus]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[LocationStatus]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LandMark]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="LandMark"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LandMark]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[LandMark]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FormationDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FormationDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FormationDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[FormationDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FinalTransfer]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="FinalTransfer"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FinalTransfer]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[FinalTransfer]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EntryDetails]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="EntryDetails"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EntryDetails]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[EntryDetails]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DissolvedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DissolvedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DissolvedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DissolvedDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CRTId]"
+                      cachedDataType="i4"
+                      cachedName="CRTId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRTId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CRTId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CreatedBy]"
+                      cachedDataType="i4"
+                      cachedName="CreatedBy"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedBy]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedBy]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Block]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Block"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Block]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Block]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Address]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="Address"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Address]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StaffId_Recg]"
+                      cachedDataType="i4"
+                      cachedName="StaffId_Recg"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StaffId_Recg]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[StaffId_Recg]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StaffId_Org]"
+                      cachedDataType="i4"
+                      cachedName="StaffId_Org"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StaffId_Org]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[StaffId_Org]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -460,6 +968,88 @@ where [refTable].[CenterId] = ?</property>
                       refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsActive]"
                       dataType="bool"
                       name="IsActive" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StaffId_Org]"
+                      dataType="i4"
+                      name="StaffId_Org" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRTId]"
+                      dataType="i4"
+                      name="CRTId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Block]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Block" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FormationDate]"
+                      dataType="dbTimeStamp"
+                      name="FormationDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReportingDay]"
+                      dataType="i4"
+                      name="ReportingDay" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DissolvedDate]"
+                      dataType="dbTimeStamp"
+                      name="DissolvedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="Address" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LandMark]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="LandMark" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LocationStatus]"
+                      dataType="i4"
+                      name="LocationStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedBy]"
+                      dataType="i4"
+                      name="CreatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedBy]"
+                      dataType="i4"
+                      name="UpdatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EntryDetails]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="EntryDetails" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDate]"
+                      dataType="dbTimeStamp"
+                      name="ProcessDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NewEmpId]"
+                      dataType="i4"
+                      name="NewEmpId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FinalTransfer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="FinalTransfer" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OldStaffID]"
+                      dataType="i4"
+                      name="OldStaffID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1215,12 +1805,6 @@ where [refTable].[CenterId] = ?</property>
                       externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PostalCode]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[StaffId_Org]"
-                      cachedDataType="i4"
-                      cachedName="StaffId_Org"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[StaffId_Recg]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[StaffId_Org]" />
-                    <inputColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[BranchId]"
                       cachedDataType="i4"
                       cachedName="BranchId"
@@ -1234,12 +1818,6 @@ where [refTable].[CenterId] = ?</property>
                       cachedName="Centercode"
                       externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[Centercode]"
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Centercode]" />
-                    <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CenterId]"
-                      cachedDataType="i4"
-                      cachedName="CenterId"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CenterId]"
-                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CenterId]" />
                     <inputColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CenterName]"
                       cachedCodepage="1252"
@@ -1274,6 +1852,130 @@ where [refTable].[CenterId] = ?</property>
                       cachedName="IsActive"
                       externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsActive]"
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsActive]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[StaffId_Recg]"
+                      cachedDataType="i4"
+                      cachedName="StaffId_Recg"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[StaffId_Recg]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[StaffId_Recg]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[StaffId_Org]"
+                      cachedDataType="i4"
+                      cachedName="StaffId_Org"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[StaffId_Org]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[StaffId_Org]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CRTId]"
+                      cachedDataType="i4"
+                      cachedName="CRTId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CRTId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CRTId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[Block]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Block"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[Block]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Block]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[FormationDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FormationDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[FormationDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[FormationDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[ReportingDay]"
+                      cachedDataType="i4"
+                      cachedName="ReportingDay"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ReportingDay]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ReportingDay]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[DissolvedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DissolvedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DissolvedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DissolvedDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[Address]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="Address"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Address]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[LandMark]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="LandMark"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[LandMark]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[LandMark]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[LocationStatus]"
+                      cachedDataType="i4"
+                      cachedName="LocationStatus"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[LocationStatus]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[LocationStatus]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CreatedBy]"
+                      cachedDataType="i4"
+                      cachedName="CreatedBy"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CreatedBy]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedBy]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[UpdatedBy]"
+                      cachedDataType="i4"
+                      cachedName="UpdatedBy"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedBy]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedBy]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[EntryDetails]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="EntryDetails"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[EntryDetails]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[EntryDetails]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[ProcessDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ProcessDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProcessDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[NewEmpId]"
+                      cachedDataType="i4"
+                      cachedName="NewEmpId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[NewEmpId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[NewEmpId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[FinalTransfer]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="FinalTransfer"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[FinalTransfer]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[FinalTransfer]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[OldStaffID]"
+                      cachedDataType="i4"
+                      cachedName="OldStaffID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[OldStaffID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[OldStaffID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1281,7 +1983,7 @@ where [refTable].[CenterId] = ?</property>
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
                       codePage="1252"
                       dataType="str"
-                      length="20"
+                      length="10"
                       name="PostalCode" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CenterId]"
@@ -1299,35 +2001,114 @@ where [refTable].[CenterId] = ?</property>
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[Centercode]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="30"
                       name="Centercode" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CenterName]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="100"
                       name="CenterName" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CenterMeetingDay]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
+                      dataType="i4"
                       name="CenterMeetingDay" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CenterMeetingTime]"
-                      dataType="dbTime2"
-                      name="CenterMeetingTime"
-                      scale="7" />
+                      dataType="dbTimeStamp"
+                      name="CenterMeetingTime" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[Village]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="100"
                       name="Village" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsActive]"
                       dataType="bool"
                       name="IsActive" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[StaffId_Org]"
+                      dataType="i4"
+                      name="StaffId_Org" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CRTId]"
+                      dataType="i4"
+                      name="CRTId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[Block]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Block" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[FormationDate]"
+                      dataType="dbTimeStamp"
+                      name="FormationDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ReportingDay]"
+                      dataType="i4"
+                      name="ReportingDay" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DissolvedDate]"
+                      dataType="dbTimeStamp"
+                      name="DissolvedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="Address" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[LandMark]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="LandMark" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[LocationStatus]"
+                      dataType="i4"
+                      name="LocationStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CreatedBy]"
+                      dataType="i4"
+                      name="CreatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedBy]"
+                      dataType="i4"
+                      name="UpdatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[EntryDetails]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="EntryDetails" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDate]"
+                      dataType="dbTimeStamp"
+                      name="ProcessDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[NewEmpId]"
+                      dataType="i4"
+                      name="NewEmpId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[FinalTransfer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="FinalTransfer" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[OldStaffID]"
+                      dataType="i4"
+                      name="OldStaffID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1391,7 +2172,8 @@ where [refTable].[CenterId] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
-          SQLTask:SqlStatementSource="UPDATE D&#xA;SET D.BUName = S.BUName,&#xA;    D.BUType = S.BUType,&#xA;    D.ReportingBUType = S.ReportingBUType,&#xA;    D.ReportingBUId = S.ReportingBUId,&#xA;    D.State = S.State,&#xA;    D.District = S.District,&#xA;    D.LocationStatus = S.LocationStatus,&#xA;    D.PostalCode = S.PostalCode&#xA;FROM [dbo].[Mst_BUnitTbl] D&#xA;INNER JOIN [dbo].[Staging_Mst_BUnitTbl] S&#xA;    ON D.BUId = S.BUId;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="UPDATE D&#xA;SET &#xA;    D.CenterId = S.CenterId,&#xA;    D.BranchId = S.BranchId,&#xA;    D.StaffId_Org = S.StaffId_Org,&#xA;    D.CRTId = S.CRTId,&#xA;    D.StaffId_Recg = S.StaffId_Recg,&#xA;    D.Centercode = S.Centercode,&#xA;    D.CenterName = S.CenterName,&#xA;    D.Block = S.Block,&#xA;    D.FormationDate = S.FormationDate,&#xA;    D.CenterMeetingDay = S.CenterMeetingDay,&#xA;    D.CenterMeetingTime = S.CenterMeetingTime,&#xA;    D.ReportingDay = S.ReportingDay,&#xA;    D.DissolvedDate = S.DissolvedDate,&#xA;    D.Address = S.Address,&#xA;    D.Village = S.Village,&#xA;    D.PostalCode = S.PostalCode,&#xA;    D.LandMark = S.LandMark,&#xA;    D.LocationStatus = S.LocationStatus,&#xA;    D.IsActive = S.IsActive,&#xA;    D.CreatedDate = S.CreatedDate,&#xA;    D.UpdatedDate = S.UpdatedDate,&#xA;    D.CreatedBy = S.CreatedBy,&#xA;    D.UpdatedBy = S.UpdatedBy,&#xA;    D.EntryDetails = S.EntryDetails,&#xA;    D.ProcessDate = S.ProcessDate,&#xA;    D.NewEmpId = S.NewEmpId,&#xA;    D.FinalTransfer = S.FinalTransfer,&#xA;    D.OldStaffID = S.OldStaffID&#xA;FROM [dbo].[Mst_Center] D&#xA;INNER JOIN [dbo].[Staging_Mst_Center] S&#xA;    ON D.CenterId = S.CenterId;&#xA;"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1799,7 +2581,7 @@ where [refTable].[CenterId] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1809,7 +2591,7 @@ where [refTable].[CenterId] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

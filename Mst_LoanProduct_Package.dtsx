@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{1B415246-27E4-45DF-B184-72B4AD87DA5A}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{9CEE5DE8-EE8F-4333-A5AE-0A52E6BA1462}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -326,12 +326,6 @@ where [refTable].[ProductId] = ?</property>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProductId]"
-                      cachedDataType="i4"
-                      cachedName="ProductId"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductId]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductId]" />
-                    <inputColumn
                       refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProductType]"
                       cachedDataType="i4"
                       cachedName="ProductType"
@@ -411,6 +405,364 @@ where [refTable].[ProductId] = ?</property>
                       cachedName="MoratoriumPeriod"
                       externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MoratoriumPeriod]"
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[MoratoriumPeriod]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[VendorPrice]"
+                      cachedDataType="cy"
+                      cachedName="VendorPrice"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VendorPrice]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[VendorPrice]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[VendorGLAccountid]"
+                      cachedDataType="i4"
+                      cachedName="VendorGLAccountid"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VendorGLAccountid]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[VendorGLAccountid]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[VendorAccountId]"
+                      cachedDataType="i4"
+                      cachedName="VendorAccountId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VendorAccountId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[VendorAccountId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[VendorAccountCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="VendorAccountCode"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VendorAccountCode]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[VendorAccountCode]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Upfrontfee]"
+                      cachedDataType="numeric"
+                      cachedName="Upfrontfee"
+                      cachedPrecision="19"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Upfrontfee]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Upfrontfee]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UpdatedBy]"
+                      cachedDataType="i4"
+                      cachedName="UpdatedBy"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedBy]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedBy]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TotalInstAmt]"
+                      cachedDataType="numeric"
+                      cachedName="TotalInstAmt"
+                      cachedPrecision="19"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalInstAmt]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[TotalInstAmt]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StampDutyAmount]"
+                      cachedDataType="numeric"
+                      cachedName="StampDutyAmount"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StampDutyAmount]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[StampDutyAmount]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StampDutyAccId]"
+                      cachedDataType="i4"
+                      cachedName="StampDutyAccId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StampDutyAccId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[StampDutyAccId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RefProductId]"
+                      cachedDataType="i4"
+                      cachedName="RefProductId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RefProductId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[RefProductId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProductIdFormat]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="ProductIdFormat"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductIdFormat]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductIdFormat]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PrincipalGrace]"
+                      cachedDataType="i4"
+                      cachedName="PrincipalGrace"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PrincipalGrace]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PrincipalGrace]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MrtrmPenal]"
+                      cachedDataType="numeric"
+                      cachedName="MrtrmPenal"
+                      cachedPrecision="19"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MrtrmPenal]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[MrtrmPenal]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MrtrmGLSubHeadID]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="MrtrmGLSubHeadID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MrtrmGLSubHeadID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[MrtrmGLSubHeadID]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LoanProductStatus]"
+                      cachedDataType="i4"
+                      cachedName="LoanProductStatus"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoanProductStatus]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoanProductStatus]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LoanGroup]"
+                      cachedDataType="i4"
+                      cachedName="LoanGroup"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoanGroup]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoanGroup]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Lenders]"
+                      cachedDataType="i4"
+                      cachedName="Lenders"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Lenders]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Lenders]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsRecovery]"
+                      cachedDataType="bool"
+                      cachedName="IsRecovery"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsRecovery]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsRecovery]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsGuarantor]"
+                      cachedDataType="i4"
+                      cachedName="IsGuarantor"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsGuarantor]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsGuarantor]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsDeleted]"
+                      cachedDataType="bool"
+                      cachedName="IsDeleted"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsDeleted]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsDeleted]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[InterestMethod]"
+                      cachedDataType="i4"
+                      cachedName="InterestMethod"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InterestMethod]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InterestMethod]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[InterestGrace]"
+                      cachedDataType="i4"
+                      cachedName="InterestGrace"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InterestGrace]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InterestGrace]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[InsurancePremiumcalculate]"
+                      cachedDataType="bool"
+                      cachedName="InsurancePremiumcalculate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InsurancePremiumcalculate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsurancePremiumcalculate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[InitialGracePeriod]"
+                      cachedDataType="i4"
+                      cachedName="InitialGracePeriod"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InitialGracePeriod]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InitialGracePeriod]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GLSubHeadID]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="GLSubHeadID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GLSubHeadID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[GLSubHeadID]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GLAccountID]"
+                      cachedDataType="i4"
+                      cachedName="GLAccountID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GLAccountID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[GLAccountID]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GL_Type]"
+                      cachedDataType="i4"
+                      cachedName="GL_Type"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GL_Type]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[GL_Type]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GL_Sub_Head_Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="GL_Sub_Head_Code"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GL_Sub_Head_Code]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[GL_Sub_Head_Code]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EligibleInstallments]"
+                      cachedDataType="i4"
+                      cachedName="EligibleInstallments"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EligibleInstallments]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[EligibleInstallments]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DisServiceTaxAccId]"
+                      cachedDataType="i4"
+                      cachedName="DisServiceTaxAccId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisServiceTaxAccId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisServiceTaxAccId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DisServiceTaxAcc]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="DisServiceTaxAcc"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisServiceTaxAcc]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisServiceTaxAcc]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DisProcessingFeeAccId]"
+                      cachedDataType="i4"
+                      cachedName="DisProcessingFeeAccId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisProcessingFeeAccId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisProcessingFeeAccId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DisProcessingFeeAcc]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="DisProcessingFeeAcc"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisProcessingFeeAcc]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisProcessingFeeAcc]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DisInsuranceAccId]"
+                      cachedDataType="i4"
+                      cachedName="DisInsuranceAccId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisInsuranceAccId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisInsuranceAccId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DisInsuranceAcc]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="DisInsuranceAcc"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisInsuranceAcc]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisInsuranceAcc]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DisbursmentMode]"
+                      cachedDataType="i4"
+                      cachedName="DisbursmentMode"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisbursmentMode]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisbursmentMode]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DisbursementAcc]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="DisbursementAcc"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisbursementAcc]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisbursementAcc]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DisbAccountID]"
+                      cachedDataType="i4"
+                      cachedName="DisbAccountID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisbAccountID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisbAccountID]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DependentFlag]"
+                      cachedDataType="bool"
+                      cachedName="DependentFlag"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DependentFlag]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DependentFlag]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CreatedBy]"
+                      cachedDataType="i4"
+                      cachedName="CreatedBy"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedBy]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedBy]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CollPrincipalAccount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CollPrincipalAccount"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollPrincipalAccount]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollPrincipalAccount]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CollPrincipalAcc]"
+                      cachedDataType="i4"
+                      cachedName="CollPrincipalAcc"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollPrincipalAcc]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollPrincipalAcc]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CollLateFeeAccount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CollLateFeeAccount"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollLateFeeAccount]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollLateFeeAccount]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CollLateFeeAcc]"
+                      cachedDataType="i4"
+                      cachedName="CollLateFeeAcc"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollLateFeeAcc]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollLateFeeAcc]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CollInterestAccountID]"
+                      cachedDataType="i4"
+                      cachedName="CollInterestAccountID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAccountID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollInterestAccountID]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CollInterestAccountGL]"
+                      cachedDataType="i4"
+                      cachedName="CollInterestAccountGL"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAccountGL]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollInterestAccountGL]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CollInterestAccount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CollInterestAccount"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAccount]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollInterestAccount]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CollInterestAcc]"
+                      cachedDataType="i4"
+                      cachedName="CollInterestAcc"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAcc]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollInterestAcc]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BCProcessingFeeAccId]"
+                      cachedDataType="i4"
+                      cachedName="BCProcessingFeeAccId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessingFeeAccId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BCProcessingFeeAccId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BCProcessingFeeAccGL]"
+                      cachedDataType="i4"
+                      cachedName="BCProcessingFeeAccGL"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessingFeeAccGL]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BCProcessingFeeAccGL]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BCProcessingFeeAccCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="BCProcessingFeeAccCode"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessingFeeAccCode]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BCProcessingFeeAccCode]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BCProcessFeePayable]"
+                      cachedDataType="bool"
+                      cachedName="BCProcessFeePayable"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessFeePayable]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BCProcessFeePayable]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BCId]"
+                      cachedDataType="i4"
+                      cachedName="BCId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BCId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BCId]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -476,6 +828,254 @@ where [refTable].[ProductId] = ?</property>
                       refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MoratoriumPeriod]"
                       dataType="i4"
                       name="MoratoriumPeriod" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductIdFormat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="ProductIdFormat" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InterestMethod]"
+                      dataType="i4"
+                      name="InterestMethod" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Upfrontfee]"
+                      dataType="numeric"
+                      name="Upfrontfee"
+                      precision="19"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PrincipalGrace]"
+                      dataType="i4"
+                      name="PrincipalGrace" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InterestGrace]"
+                      dataType="i4"
+                      name="InterestGrace" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InitialGracePeriod]"
+                      dataType="i4"
+                      name="InitialGracePeriod" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollPrincipalAcc]"
+                      dataType="i4"
+                      name="CollPrincipalAcc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAcc]"
+                      dataType="i4"
+                      name="CollInterestAcc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollLateFeeAcc]"
+                      dataType="i4"
+                      name="CollLateFeeAcc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalInstAmt]"
+                      dataType="numeric"
+                      name="TotalInstAmt"
+                      precision="19"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoanGroup]"
+                      dataType="i4"
+                      name="LoanGroup" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoanProductStatus]"
+                      dataType="i4"
+                      name="LoanProductStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GL_Type]"
+                      dataType="i4"
+                      name="GL_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GL_Sub_Head_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="GL_Sub_Head_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsDeleted]"
+                      dataType="bool"
+                      name="IsDeleted" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedBy]"
+                      dataType="i4"
+                      name="CreatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedBy]"
+                      dataType="i4"
+                      name="UpdatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MrtrmPenal]"
+                      dataType="numeric"
+                      name="MrtrmPenal"
+                      precision="19"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MrtrmGLSubHeadID]"
+                      dataType="wstr"
+                      length="100"
+                      name="MrtrmGLSubHeadID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GLSubHeadID]"
+                      dataType="wstr"
+                      length="500"
+                      name="GLSubHeadID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisbursementAcc]"
+                      dataType="wstr"
+                      length="500"
+                      name="DisbursementAcc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisServiceTaxAcc]"
+                      dataType="wstr"
+                      length="500"
+                      name="DisServiceTaxAcc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisServiceTaxAccId]"
+                      dataType="i4"
+                      name="DisServiceTaxAccId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisInsuranceAcc]"
+                      dataType="wstr"
+                      length="500"
+                      name="DisInsuranceAcc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisInsuranceAccId]"
+                      dataType="i4"
+                      name="DisInsuranceAccId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisProcessingFeeAcc]"
+                      dataType="wstr"
+                      length="500"
+                      name="DisProcessingFeeAcc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisProcessingFeeAccId]"
+                      dataType="i4"
+                      name="DisProcessingFeeAccId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollPrincipalAccount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CollPrincipalAccount" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAccount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CollInterestAccount" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollLateFeeAccount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CollLateFeeAccount" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BCId]"
+                      dataType="i4"
+                      name="BCId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Lenders]"
+                      dataType="i4"
+                      name="Lenders" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GLAccountID]"
+                      dataType="i4"
+                      name="GLAccountID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisbAccountID]"
+                      dataType="i4"
+                      name="DisbAccountID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAccountGL]"
+                      dataType="i4"
+                      name="CollInterestAccountGL" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAccountID]"
+                      dataType="i4"
+                      name="CollInterestAccountID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VendorPrice]"
+                      dataType="cy"
+                      name="VendorPrice" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VendorAccountId]"
+                      dataType="i4"
+                      name="VendorAccountId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VendorAccountCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VendorAccountCode" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VendorGLAccountid]"
+                      dataType="i4"
+                      name="VendorGLAccountid" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsRecovery]"
+                      dataType="bool"
+                      name="IsRecovery" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisbursmentMode]"
+                      dataType="i4"
+                      name="DisbursmentMode" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsGuarantor]"
+                      dataType="i4"
+                      name="IsGuarantor" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessFeePayable]"
+                      dataType="bool"
+                      name="BCProcessFeePayable" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessingFeeAccId]"
+                      dataType="i4"
+                      name="BCProcessingFeeAccId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessingFeeAccGL]"
+                      dataType="i4"
+                      name="BCProcessingFeeAccGL" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessingFeeAccCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="BCProcessingFeeAccCode" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DependentFlag]"
+                      dataType="bool"
+                      name="DependentFlag" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RefProductId]"
+                      dataType="i4"
+                      name="RefProductId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EligibleInstallments]"
+                      dataType="i4"
+                      name="EligibleInstallments" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StampDutyAmount]"
+                      dataType="numeric"
+                      name="StampDutyAmount"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StampDutyAccId]"
+                      dataType="i4"
+                      name="StampDutyAccId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InsurancePremiumcalculate]"
+                      dataType="bool"
+                      name="InsurancePremiumcalculate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1997,12 +2597,6 @@ where [refTable].[ProductId] = ?</property>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[ProductId]"
-                      cachedDataType="i4"
-                      cachedName="ProductId"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ProductId]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductId]" />
-                    <inputColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[ProductType]"
                       cachedDataType="i4"
                       cachedName="ProductType"
@@ -2082,6 +2676,364 @@ where [refTable].[ProductId] = ?</property>
                       cachedName="MoratoriumPeriod"
                       externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[MoratoriumPeriod]"
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[MoratoriumPeriod]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[VendorPrice]"
+                      cachedDataType="cy"
+                      cachedName="VendorPrice"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[VendorPrice]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[VendorPrice]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[VendorGLAccountid]"
+                      cachedDataType="i4"
+                      cachedName="VendorGLAccountid"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[VendorGLAccountid]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[VendorGLAccountid]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[VendorAccountId]"
+                      cachedDataType="i4"
+                      cachedName="VendorAccountId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[VendorAccountId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[VendorAccountId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[VendorAccountCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="VendorAccountCode"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[VendorAccountCode]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[VendorAccountCode]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[Upfrontfee]"
+                      cachedDataType="numeric"
+                      cachedName="Upfrontfee"
+                      cachedPrecision="19"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[Upfrontfee]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Upfrontfee]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[UpdatedBy]"
+                      cachedDataType="i4"
+                      cachedName="UpdatedBy"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedBy]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedBy]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[TotalInstAmt]"
+                      cachedDataType="numeric"
+                      cachedName="TotalInstAmt"
+                      cachedPrecision="19"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[TotalInstAmt]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[TotalInstAmt]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[StampDutyAmount]"
+                      cachedDataType="numeric"
+                      cachedName="StampDutyAmount"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[StampDutyAmount]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[StampDutyAmount]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[StampDutyAccId]"
+                      cachedDataType="i4"
+                      cachedName="StampDutyAccId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[StampDutyAccId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[StampDutyAccId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[RefProductId]"
+                      cachedDataType="i4"
+                      cachedName="RefProductId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[RefProductId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[RefProductId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[ProductIdFormat]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="ProductIdFormat"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ProductIdFormat]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductIdFormat]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[PrincipalGrace]"
+                      cachedDataType="i4"
+                      cachedName="PrincipalGrace"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[PrincipalGrace]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PrincipalGrace]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[MrtrmPenal]"
+                      cachedDataType="numeric"
+                      cachedName="MrtrmPenal"
+                      cachedPrecision="19"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[MrtrmPenal]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[MrtrmPenal]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[MrtrmGLSubHeadID]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="MrtrmGLSubHeadID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[MrtrmGLSubHeadID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[MrtrmGLSubHeadID]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[LoanProductStatus]"
+                      cachedDataType="i4"
+                      cachedName="LoanProductStatus"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[LoanProductStatus]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoanProductStatus]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[LoanGroup]"
+                      cachedDataType="i4"
+                      cachedName="LoanGroup"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[LoanGroup]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoanGroup]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[Lenders]"
+                      cachedDataType="i4"
+                      cachedName="Lenders"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[Lenders]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Lenders]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[IsRecovery]"
+                      cachedDataType="bool"
+                      cachedName="IsRecovery"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsRecovery]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsRecovery]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[IsGuarantor]"
+                      cachedDataType="i4"
+                      cachedName="IsGuarantor"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsGuarantor]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsGuarantor]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[IsDeleted]"
+                      cachedDataType="bool"
+                      cachedName="IsDeleted"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsDeleted]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsDeleted]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[InterestMethod]"
+                      cachedDataType="i4"
+                      cachedName="InterestMethod"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InterestMethod]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InterestMethod]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[InterestGrace]"
+                      cachedDataType="i4"
+                      cachedName="InterestGrace"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InterestGrace]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InterestGrace]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[InsurancePremiumcalculate]"
+                      cachedDataType="bool"
+                      cachedName="InsurancePremiumcalculate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InsurancePremiumcalculate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsurancePremiumcalculate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[InitialGracePeriod]"
+                      cachedDataType="i4"
+                      cachedName="InitialGracePeriod"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InitialGracePeriod]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InitialGracePeriod]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[GLSubHeadID]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="GLSubHeadID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[GLSubHeadID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[GLSubHeadID]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[GLAccountID]"
+                      cachedDataType="i4"
+                      cachedName="GLAccountID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[GLAccountID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[GLAccountID]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[GL_Type]"
+                      cachedDataType="i4"
+                      cachedName="GL_Type"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[GL_Type]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[GL_Type]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[GL_Sub_Head_Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="GL_Sub_Head_Code"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[GL_Sub_Head_Code]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[GL_Sub_Head_Code]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[EligibleInstallments]"
+                      cachedDataType="i4"
+                      cachedName="EligibleInstallments"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[EligibleInstallments]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[EligibleInstallments]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[DisServiceTaxAccId]"
+                      cachedDataType="i4"
+                      cachedName="DisServiceTaxAccId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisServiceTaxAccId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisServiceTaxAccId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[DisServiceTaxAcc]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="DisServiceTaxAcc"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisServiceTaxAcc]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisServiceTaxAcc]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[DisProcessingFeeAccId]"
+                      cachedDataType="i4"
+                      cachedName="DisProcessingFeeAccId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisProcessingFeeAccId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisProcessingFeeAccId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[DisProcessingFeeAcc]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="DisProcessingFeeAcc"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisProcessingFeeAcc]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisProcessingFeeAcc]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[DisInsuranceAccId]"
+                      cachedDataType="i4"
+                      cachedName="DisInsuranceAccId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisInsuranceAccId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisInsuranceAccId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[DisInsuranceAcc]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="DisInsuranceAcc"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisInsuranceAcc]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisInsuranceAcc]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[DisbursmentMode]"
+                      cachedDataType="i4"
+                      cachedName="DisbursmentMode"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisbursmentMode]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisbursmentMode]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[DisbursementAcc]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="DisbursementAcc"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisbursementAcc]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisbursementAcc]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[DisbAccountID]"
+                      cachedDataType="i4"
+                      cachedName="DisbAccountID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisbAccountID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisbAccountID]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[DependentFlag]"
+                      cachedDataType="bool"
+                      cachedName="DependentFlag"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DependentFlag]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DependentFlag]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CreatedBy]"
+                      cachedDataType="i4"
+                      cachedName="CreatedBy"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CreatedBy]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedBy]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CollPrincipalAccount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CollPrincipalAccount"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollPrincipalAccount]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollPrincipalAccount]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CollPrincipalAcc]"
+                      cachedDataType="i4"
+                      cachedName="CollPrincipalAcc"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollPrincipalAcc]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollPrincipalAcc]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CollLateFeeAccount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CollLateFeeAccount"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollLateFeeAccount]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollLateFeeAccount]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CollLateFeeAcc]"
+                      cachedDataType="i4"
+                      cachedName="CollLateFeeAcc"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollLateFeeAcc]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollLateFeeAcc]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CollInterestAccountID]"
+                      cachedDataType="i4"
+                      cachedName="CollInterestAccountID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAccountID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollInterestAccountID]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CollInterestAccountGL]"
+                      cachedDataType="i4"
+                      cachedName="CollInterestAccountGL"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAccountGL]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollInterestAccountGL]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CollInterestAccount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CollInterestAccount"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAccount]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollInterestAccount]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CollInterestAcc]"
+                      cachedDataType="i4"
+                      cachedName="CollInterestAcc"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAcc]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollInterestAcc]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[BCProcessingFeeAccId]"
+                      cachedDataType="i4"
+                      cachedName="BCProcessingFeeAccId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessingFeeAccId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BCProcessingFeeAccId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[BCProcessingFeeAccGL]"
+                      cachedDataType="i4"
+                      cachedName="BCProcessingFeeAccGL"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessingFeeAccGL]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BCProcessingFeeAccGL]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[BCProcessingFeeAccCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="BCProcessingFeeAccCode"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessingFeeAccCode]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BCProcessingFeeAccCode]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[BCProcessFeePayable]"
+                      cachedDataType="bool"
+                      cachedName="BCProcessFeePayable"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessFeePayable]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BCProcessFeePayable]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[BCId]"
+                      cachedDataType="i4"
+                      cachedName="BCId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BCId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BCId]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2097,7 +3049,7 @@ where [refTable].[ProductId] = ?</property>
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="100"
                       name="ProductName" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[TermPeriod]"
@@ -2111,42 +3063,290 @@ where [refTable].[ProductId] = ?</property>
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InterestRate]"
                       dataType="numeric"
                       name="InterestRate"
-                      precision="10"
+                      precision="19"
                       scale="2" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ProcessFee]"
                       dataType="numeric"
                       name="ProcessFee"
-                      precision="10"
+                      precision="19"
                       scale="2" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ServiceTax]"
                       dataType="numeric"
                       name="ServiceTax"
-                      precision="10"
+                      precision="19"
                       scale="2" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[Insurancefee]"
                       dataType="numeric"
                       name="Insurancefee"
-                      precision="10"
+                      precision="19"
                       scale="2" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisbursedAmount]"
                       dataType="numeric"
                       name="DisbursedAmount"
-                      precision="18"
+                      precision="19"
                       scale="2" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[TotalIntAmount]"
                       dataType="numeric"
                       name="TotalIntAmount"
-                      precision="18"
+                      precision="19"
                       scale="2" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[MoratoriumPeriod]"
                       dataType="i4"
                       name="MoratoriumPeriod" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ProductIdFormat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="ProductIdFormat" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InterestMethod]"
+                      dataType="i4"
+                      name="InterestMethod" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[Upfrontfee]"
+                      dataType="numeric"
+                      name="Upfrontfee"
+                      precision="19"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[PrincipalGrace]"
+                      dataType="i4"
+                      name="PrincipalGrace" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InterestGrace]"
+                      dataType="i4"
+                      name="InterestGrace" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InitialGracePeriod]"
+                      dataType="i4"
+                      name="InitialGracePeriod" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollPrincipalAcc]"
+                      dataType="i4"
+                      name="CollPrincipalAcc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAcc]"
+                      dataType="i4"
+                      name="CollInterestAcc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollLateFeeAcc]"
+                      dataType="i4"
+                      name="CollLateFeeAcc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[TotalInstAmt]"
+                      dataType="numeric"
+                      name="TotalInstAmt"
+                      precision="19"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[LoanGroup]"
+                      dataType="i4"
+                      name="LoanGroup" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[LoanProductStatus]"
+                      dataType="i4"
+                      name="LoanProductStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[GL_Type]"
+                      dataType="i4"
+                      name="GL_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[GL_Sub_Head_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="GL_Sub_Head_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsDeleted]"
+                      dataType="bool"
+                      name="IsDeleted" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CreatedBy]"
+                      dataType="i4"
+                      name="CreatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedBy]"
+                      dataType="i4"
+                      name="UpdatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[MrtrmPenal]"
+                      dataType="numeric"
+                      name="MrtrmPenal"
+                      precision="19"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[MrtrmGLSubHeadID]"
+                      dataType="wstr"
+                      length="100"
+                      name="MrtrmGLSubHeadID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[GLSubHeadID]"
+                      dataType="wstr"
+                      length="500"
+                      name="GLSubHeadID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisbursementAcc]"
+                      dataType="wstr"
+                      length="500"
+                      name="DisbursementAcc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisServiceTaxAcc]"
+                      dataType="wstr"
+                      length="500"
+                      name="DisServiceTaxAcc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisServiceTaxAccId]"
+                      dataType="i4"
+                      name="DisServiceTaxAccId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisInsuranceAcc]"
+                      dataType="wstr"
+                      length="500"
+                      name="DisInsuranceAcc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisInsuranceAccId]"
+                      dataType="i4"
+                      name="DisInsuranceAccId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisProcessingFeeAcc]"
+                      dataType="wstr"
+                      length="500"
+                      name="DisProcessingFeeAcc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisProcessingFeeAccId]"
+                      dataType="i4"
+                      name="DisProcessingFeeAccId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollPrincipalAccount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CollPrincipalAccount" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAccount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CollInterestAccount" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollLateFeeAccount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CollLateFeeAccount" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BCId]"
+                      dataType="i4"
+                      name="BCId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[Lenders]"
+                      dataType="i4"
+                      name="Lenders" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[GLAccountID]"
+                      dataType="i4"
+                      name="GLAccountID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisbAccountID]"
+                      dataType="i4"
+                      name="DisbAccountID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAccountGL]"
+                      dataType="i4"
+                      name="CollInterestAccountGL" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollInterestAccountID]"
+                      dataType="i4"
+                      name="CollInterestAccountID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[VendorPrice]"
+                      dataType="cy"
+                      name="VendorPrice" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[VendorAccountId]"
+                      dataType="i4"
+                      name="VendorAccountId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[VendorAccountCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VendorAccountCode" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[VendorGLAccountid]"
+                      dataType="i4"
+                      name="VendorGLAccountid" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsRecovery]"
+                      dataType="bool"
+                      name="IsRecovery" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisbursmentMode]"
+                      dataType="i4"
+                      name="DisbursmentMode" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsGuarantor]"
+                      dataType="i4"
+                      name="IsGuarantor" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessFeePayable]"
+                      dataType="bool"
+                      name="BCProcessFeePayable" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessingFeeAccId]"
+                      dataType="i4"
+                      name="BCProcessingFeeAccId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessingFeeAccGL]"
+                      dataType="i4"
+                      name="BCProcessingFeeAccGL" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BCProcessingFeeAccCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="BCProcessingFeeAccCode" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DependentFlag]"
+                      dataType="bool"
+                      name="DependentFlag" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[RefProductId]"
+                      dataType="i4"
+                      name="RefProductId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[EligibleInstallments]"
+                      dataType="i4"
+                      name="EligibleInstallments" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[StampDutyAmount]"
+                      dataType="numeric"
+                      name="StampDutyAmount"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[StampDutyAccId]"
+                      dataType="i4"
+                      name="StampDutyAccId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[InsurancePremiumcalculate]"
+                      dataType="bool"
+                      name="InsurancePremiumcalculate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2475,6 +3675,10 @@ where [refTable].[ProductId] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Extract and Load Data\OLE DB Staging"
+          TopLeft="526.190447440698,273.619045716335" />
+        <NodeLayout
           Size="171.2,41.6"
           Id="Package\Extract and Load Data\OLE DB Destination"
           TopLeft="297.499983745317,272.999998101592" />
@@ -2486,10 +3690,6 @@ where [refTable].[ProductId] = ?</property>
           Size="112.8,41.6"
           Id="Package\Extract and Load Data\Lookup"
           TopLeft="447.999975822867,150.233332326876" />
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Extract and Load Data\OLE DB Staging"
-          TopLeft="526.190447440698,273.619045716335" />
         <EdgeLayout
           Id="Package\Extract and Load Data.Paths[OLE DB Source Output]"
           TopLeft="507.199984677882,90.5999992698431">

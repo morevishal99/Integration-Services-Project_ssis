@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{87E91DC3-B319-4510-84EF-55A5DF5A77E5}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{6ACFBBC9-8F3B-44CE-81B4-41DDDC500B91}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -1794,7 +1794,7 @@ where ld.actualpaiddate is null</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
-          SQLTask:SqlStatementSource="UPDATE D&#xA;SET &#xA;    D.ProposalId = S.ProposalId,&#xA;    D.ProductId = S.ProductId,&#xA;    D.CustomerInfoId = S.CustomerInfoId,&#xA;    D.BranchId = S.BranchId,&#xA;    D.SanctionDate = S.SanctionDate,&#xA;    D.SanctionAmt = S.SanctionAmt,&#xA;    D.TermPeriod = S.TermPeriod,&#xA;    D.GroupId = S.GroupId,&#xA;    D.CenterID = S.CenterID,&#xA;    D.PayMode = S.PayMode,&#xA;    D.DisbursementAmount = S.DisbursementAmount,&#xA;    D.DisbursementDate = S.DisbursementDate,&#xA;    D.DisburementStatus = S.DisburementStatus,&#xA;    D.FunderId = S.FunderId,&#xA;    D.InsuranceCoId = S.InsuranceCoId,&#xA;    D.CreatedDate = S.CreatedDate,&#xA;    D.UpdatedDate = S.UpdatedDate,&#xA;    D.CreatedBy = S.CreatedBy,&#xA;    D.UpdatedBy = S.UpdatedBy,&#xA;    D.AccountId = S.AccountId,&#xA;    D.Transfer = S.Transfer,&#xA;    D.ProductDetId = S.ProductDetId,&#xA;    D.ProcessDate = S.ProcessDate,&#xA;    D.RecoveryAmt = S.RecoveryAmt,&#xA;    D.FirstInstallmentDate = S.FirstInstallmentDate,&#xA;    D.PartDisbursedAmt = S.PartDisbursedAmt,&#xA;    D.SCH_DOC_UPLOADED = S.SCH_DOC_UPLOADED&#xA;FROM [dbo].[Trn_LoanSanction]  D&#xA;INNER JOIN [dbo].[Staging_Trn_LoanSanction] S &#xA;    ON D.LoanSanctionId = S.LoanSanctionId;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="UPDATE D&#xA;SET &#xA;    D.BankName = S.BankName,&#xA;    D.Address = S.Address,&#xA;    D.RefAccountNo = S.RefAccountNo,&#xA;    D.BankBranch = S.BankBranch,&#xA;    D.CreatedBy = S.CreatedBy,&#xA;    D.CreatedDate = S.CreatedDate,&#xA;    D.UpdatedBy = S.UpdatedBy,&#xA;    D.UpdatedDate = S.UpdatedDate,&#xA;    D.LoanStatus = S.LoanStatus,&#xA;    D.GroupName = S.GroupName,&#xA;    D.BCGroupID = S.BCGroupID,&#xA;    D.PrinciplePayAcc = S.PrinciplePayAcc,&#xA;    D.PrinciplePayAccGL = S.PrinciplePayAccGL,&#xA;    D.PrinciplePayAccCode = S.PrinciplePayAccCode,&#xA;    D.InterestPayAcc = S.InterestPayAcc,&#xA;    D.InterestPayAccGL = S.InterestPayAccGL,&#xA;    D.InterestPayAccCode = S.InterestPayAccCode,&#xA;    D.PayableToBCAcc = S.PayableToBCAcc,&#xA;    D.PayableToBCAccGL = S.PayableToBCAccGL,&#xA;    D.PayableToBCAccCode = S.PayableToBCAccCode&#xA;FROM [dbo].[Mst_BCTbl] D&#xA;INNER JOIN [dbo].[Staging_Mst_BCTbl] S&#xA;    ON D.BCId = S.BCId;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -2138,33 +2138,20 @@ where ld.actualpaiddate is null</property>
     </LayoutInfo>
   </DtsEventHandler>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract and Load Data\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract and Load Data\OLE DB Staging">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Extract and Load Data\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract and Load Data\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2182,7 +2169,7 @@ where ld.actualpaiddate is null</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2192,10 +2179,23 @@ where ld.actualpaiddate is null</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract and Load Data\OLE DB Staging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

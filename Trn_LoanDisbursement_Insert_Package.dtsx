@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Trn_LoanDisbursement_Insert_Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="63"
-  DTS:VersionGUID="{E50D6AC5-DBDD-45BA-A4A0-2146CA4ED911}">
+  DTS:VersionBuild="64"
+  DTS:VersionGUID="{7B6B4123-02AD-4964-ABFD-EFD748C5F504}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -221,7 +221,7 @@ where [refTable].[DisbursementID] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DisbursementID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LoanSanctionID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CustomerInfoID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProductID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="BranchID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CenterID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DisbursedAmt" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DisbursementDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FunderID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PincipalOS" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="InterestOS" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TotalInstallment" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ActualPaidDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsPreSettlement" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsWriteOff" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WriteOffAmt" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ExpectPaidDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Is_Active" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LoanType" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CustomerClassification" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CustomerClassificationDt" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DisbursementID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LoanSanctionID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CustomerInfoID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProductID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="BranchID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CenterID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DisbursedAmt" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DisbursementDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FunderID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="InsuMainID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TotalInterest" dataType="DT_NUMERIC" length="0" precision="18" scale="2" codePage="0"/&gt;&lt;referenceColumn name="TransMode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TransModeNo" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="PincipalOS" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="InterestOS" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TotalInstallment" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ActualPaidDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ChequeDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsPreSettlement" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsWriteOff" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WriteOffAmt" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ExpectPaidDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Is_Active" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LoanType" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProcessDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedBy" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedBy" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Remarks" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="TransactionType" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="IsJV" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AccountId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsAuthenticated" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CustomerClassification" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CustomerClassificationDt" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RefDisbursementId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ActualDisburseAmount" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RecoveryAmount" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RepaymentMode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UMRNCode" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ST_Deducted" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IP_Deducted" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IRR_OLD" dataType="DT_NUMERIC" length="0" precision="18" scale="2" codePage="0"/&gt;&lt;referenceColumn name="IRR_New" dataType="DT_NUMERIC" length="0" precision="18" scale="2" codePage="0"/&gt;&lt;referenceColumn name="TOTALINTCALCULATED_MORATORIUM" dataType="DT_NUMERIC" length="0" precision="18" scale="2" codePage="0"/&gt;&lt;referenceColumn name="TOTALINTRECVD_MORATORIUM" dataType="DT_NUMERIC" length="0" precision="18" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Funderreplace" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FunderreplaceDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -289,6 +289,698 @@ where [refTable].[DisbursementID] = ?</property>
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
                           name="CopyFromReferenceColumn">DisbursementID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[LoanSanctionID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[LoanSanctionID]"
+                      name="LoanSanctionID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">LoanSanctionID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CustomerInfoID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CustomerInfoID]"
+                      name="CustomerInfoID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CustomerInfoID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ProductID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ProductID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[BranchID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[BranchID]"
+                      name="BranchID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">BranchID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CenterID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CenterID]"
+                      name="CenterID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CenterID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[DisbursedAmt]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[DisbursedAmt]"
+                      name="DisbursedAmt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DisbursedAmt</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[DisbursementDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[DisbursementDate]"
+                      name="DisbursementDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DisbursementDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[FunderID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[FunderID]"
+                      name="FunderID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">FunderID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[InsuMainID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[InsuMainID]"
+                      name="InsuMainID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">InsuMainID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[TotalInterest]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[TotalInterest]"
+                      name="TotalInterest"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">TotalInterest</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[TransMode]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[TransMode]"
+                      name="TransMode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">TransMode</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[TransModeNo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[TransModeNo]"
+                      name="TransModeNo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">TransModeNo</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[PincipalOS]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[PincipalOS]"
+                      name="PincipalOS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">PincipalOS</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[InterestOS]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[InterestOS]"
+                      name="InterestOS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">InterestOS</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[TotalInstallment]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[TotalInstallment]"
+                      name="TotalInstallment"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">TotalInstallment</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ActualPaidDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ActualPaidDate]"
+                      name="ActualPaidDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ActualPaidDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ChequeDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ChequeDate]"
+                      name="ChequeDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ChequeDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IsPreSettlement]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IsPreSettlement]"
+                      name="IsPreSettlement"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IsPreSettlement</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IsWriteOff]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IsWriteOff]"
+                      name="IsWriteOff"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IsWriteOff</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[WriteOffAmt]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[WriteOffAmt]"
+                      name="WriteOffAmt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">WriteOffAmt</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ExpectPaidDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ExpectPaidDate]"
+                      name="ExpectPaidDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ExpectPaidDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[Is_Active]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[Is_Active]"
+                      name="Is_Active"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Is_Active</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[LoanType]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[LoanType]"
+                      name="LoanType"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">LoanType</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ProcessDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ProcessDate]"
+                      name="ProcessDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ProcessDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CreatedBy]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CreatedBy]"
+                      name="CreatedBy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CreatedBy</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CreatedDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[UpdatedBy]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[UpdatedBy]"
+                      name="UpdatedBy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">UpdatedBy</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">UpdatedDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[Remarks]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="200"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[Remarks]"
+                      name="Remarks"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Remarks</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[TransactionType]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="200"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[TransactionType]"
+                      name="TransactionType"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">TransactionType</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IsJV]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IsJV]"
+                      name="IsJV"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IsJV</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[AccountId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[AccountId]"
+                      name="AccountId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">AccountId</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IsAuthenticated]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IsAuthenticated]"
+                      name="IsAuthenticated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IsAuthenticated</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CustomerClassification]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CustomerClassification]"
+                      name="CustomerClassification"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CustomerClassification</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CustomerClassificationDt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CustomerClassificationDt]"
+                      name="CustomerClassificationDt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CustomerClassificationDt</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[RefDisbursementId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[RefDisbursementId]"
+                      name="RefDisbursementId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">RefDisbursementId</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ActualDisburseAmount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ActualDisburseAmount]"
+                      name="ActualDisburseAmount"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ActualDisburseAmount</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[RecoveryAmount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[RecoveryAmount]"
+                      name="RecoveryAmount"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">RecoveryAmount</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[RepaymentMode]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[RepaymentMode]"
+                      name="RepaymentMode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">RepaymentMode</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[UMRNCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[UMRNCode]"
+                      name="UMRNCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">UMRNCode</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ST_Deducted]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[ST_Deducted]"
+                      name="ST_Deducted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ST_Deducted</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IP_Deducted]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IP_Deducted]"
+                      name="IP_Deducted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IP_Deducted</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IRR_OLD]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IRR_OLD]"
+                      name="IRR_OLD"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IRR_OLD</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IRR_New]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IRR_New]"
+                      name="IRR_New"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IRR_New</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[TOTALINTCALCULATED_MORATORIUM]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[TOTALINTCALCULATED_MORATORIUM]"
+                      name="TOTALINTCALCULATED_MORATORIUM"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">TOTALINTCALCULATED_MORATORIUM</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[TOTALINTRECVD_MORATORIUM]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[TOTALINTRECVD_MORATORIUM]"
+                      name="TOTALINTRECVD_MORATORIUM"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">TOTALINTRECVD_MORATORIUM</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[Funderreplace]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[Funderreplace]"
+                      name="Funderreplace"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Funderreplace</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[FunderreplaceDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[FunderreplaceDate]"
+                      name="FunderreplaceDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">FunderreplaceDate</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -398,12 +1090,6 @@ where [refTable].[DisbursementID] = ?</property>
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DisbursementID]"
-                      cachedDataType="i4"
-                      cachedName="DisbursementID"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisbursementID]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisbursementID]" />
                     <inputColumn
                       refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LoanSanctionID]"
                       cachedDataType="i4"
@@ -524,6 +1210,194 @@ where [refTable].[DisbursementID] = ?</property>
                       cachedName="CustomerClassificationDt"
                       externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerClassificationDt]"
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerClassificationDt]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UpdatedBy]"
+                      cachedDataType="i4"
+                      cachedName="UpdatedBy"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedBy]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedBy]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UMRNCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UMRNCode"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UMRNCode]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UMRNCode]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TransModeNo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TransModeNo"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TransModeNo]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[TransModeNo]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TransMode]"
+                      cachedDataType="i4"
+                      cachedName="TransMode"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TransMode]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[TransMode]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TransactionType]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="TransactionType"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TransactionType]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[TransactionType]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TOTALINTRECVD_MORATORIUM]"
+                      cachedDataType="numeric"
+                      cachedName="TOTALINTRECVD_MORATORIUM"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TOTALINTRECVD_MORATORIUM]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[TOTALINTRECVD_MORATORIUM]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TotalInterest]"
+                      cachedDataType="numeric"
+                      cachedName="TotalInterest"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalInterest]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[TotalInterest]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TOTALINTCALCULATED_MORATORIUM]"
+                      cachedDataType="numeric"
+                      cachedName="TOTALINTCALCULATED_MORATORIUM"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TOTALINTCALCULATED_MORATORIUM]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[TOTALINTCALCULATED_MORATORIUM]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ST_Deducted]"
+                      cachedDataType="bool"
+                      cachedName="ST_Deducted"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ST_Deducted]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ST_Deducted]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RepaymentMode]"
+                      cachedDataType="i4"
+                      cachedName="RepaymentMode"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RepaymentMode]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[RepaymentMode]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Remarks]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="Remarks"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Remarks]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Remarks]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RefDisbursementId]"
+                      cachedDataType="i4"
+                      cachedName="RefDisbursementId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RefDisbursementId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[RefDisbursementId]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RecoveryAmount]"
+                      cachedDataType="numeric"
+                      cachedName="RecoveryAmount"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RecoveryAmount]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[RecoveryAmount]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProcessDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ProcessDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProcessDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsJV]"
+                      cachedDataType="bool"
+                      cachedName="IsJV"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsJV]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsJV]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsAuthenticated]"
+                      cachedDataType="bool"
+                      cachedName="IsAuthenticated"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsAuthenticated]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsAuthenticated]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IRR_OLD]"
+                      cachedDataType="numeric"
+                      cachedName="IRR_OLD"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IRR_OLD]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IRR_OLD]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IRR_New]"
+                      cachedDataType="numeric"
+                      cachedName="IRR_New"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IRR_New]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IRR_New]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IP_Deducted]"
+                      cachedDataType="bool"
+                      cachedName="IP_Deducted"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IP_Deducted]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IP_Deducted]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[InsuMainID]"
+                      cachedDataType="i4"
+                      cachedName="InsuMainID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InsuMainID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsuMainID]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FunderreplaceDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FunderreplaceDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FunderreplaceDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[FunderreplaceDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Funderreplace]"
+                      cachedDataType="i4"
+                      cachedName="Funderreplace"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Funderreplace]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Funderreplace]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CreatedBy]"
+                      cachedDataType="i4"
+                      cachedName="CreatedBy"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedBy]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedBy]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ChequeDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ChequeDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ChequeDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ChequeDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ActualDisburseAmount]"
+                      cachedDataType="numeric"
+                      cachedName="ActualDisburseAmount"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ActualDisburseAmount]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ActualDisburseAmount]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AccountId]"
+                      cachedDataType="i4"
+                      cachedName="AccountId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AccountId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[AccountId]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -611,6 +1485,138 @@ where [refTable].[DisbursementID] = ?</property>
                       refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerClassificationDt]"
                       dataType="dbTimeStamp"
                       name="CustomerClassificationDt" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InsuMainID]"
+                      dataType="i4"
+                      name="InsuMainID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalInterest]"
+                      dataType="numeric"
+                      name="TotalInterest"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TransMode]"
+                      dataType="i4"
+                      name="TransMode" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TransModeNo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TransModeNo" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ChequeDate]"
+                      dataType="dbTimeStamp"
+                      name="ChequeDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDate]"
+                      dataType="dbTimeStamp"
+                      name="ProcessDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedBy]"
+                      dataType="i4"
+                      name="CreatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedBy]"
+                      dataType="i4"
+                      name="UpdatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Remarks]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="Remarks" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TransactionType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="TransactionType" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsJV]"
+                      dataType="bool"
+                      name="IsJV" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AccountId]"
+                      dataType="i4"
+                      name="AccountId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsAuthenticated]"
+                      dataType="bool"
+                      name="IsAuthenticated" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RefDisbursementId]"
+                      dataType="i4"
+                      name="RefDisbursementId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ActualDisburseAmount]"
+                      dataType="numeric"
+                      name="ActualDisburseAmount"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RecoveryAmount]"
+                      dataType="numeric"
+                      name="RecoveryAmount"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RepaymentMode]"
+                      dataType="i4"
+                      name="RepaymentMode" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UMRNCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UMRNCode" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ST_Deducted]"
+                      dataType="bool"
+                      name="ST_Deducted" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IP_Deducted]"
+                      dataType="bool"
+                      name="IP_Deducted" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IRR_OLD]"
+                      dataType="numeric"
+                      name="IRR_OLD"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IRR_New]"
+                      dataType="numeric"
+                      name="IRR_New"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TOTALINTCALCULATED_MORATORIUM]"
+                      dataType="numeric"
+                      name="TOTALINTCALCULATED_MORATORIUM"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TOTALINTRECVD_MORATORIUM]"
+                      dataType="numeric"
+                      name="TOTALINTRECVD_MORATORIUM"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Funderreplace]"
+                      dataType="i4"
+                      name="Funderreplace" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FunderreplaceDate]"
+                      dataType="dbTimeStamp"
+                      name="FunderreplaceDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2018,18 +3024,18 @@ WHERE DisbursementDate = CONVERT(VARCHAR, DATEADD(DAY, -1, GETDATE()), 23)</prop
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Extract and Load Data.Paths[Lookup No Match Output]"
-          TopLeft="505.416643081441,191.833332326876">
+          TopLeft="505.41664308144,191.833332326876">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,80.2999991140759"
+              EndConnector="0,80.299999114076"
               Start="0,0"
-              End="0,72.7999991140759">
+              End="0,72.799999114076">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,72.7999991140759" />
+                    End="0,72.799999114076" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2074,7 +3080,7 @@ WHERE DisbursementDate = CONVERT(VARCHAR, DATEADD(DAY, -1, GETDATE()), 23)</prop
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2084,7 +3090,7 @@ WHERE DisbursementDate = CONVERT(VARCHAR, DATEADD(DAY, -1, GETDATE()), 23)</prop
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

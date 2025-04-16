@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{DEC00C32-FB37-4014-8FF0-F2BB1D7A6B66}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{C6B8CE63-5954-4491-8668-8B4454490C71}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -878,7 +878,7 @@ where [refTable].[BranchID] = ? and [refTable].[DisbursementID] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
-          SQLTask:SqlStatementSource="UPDATE D&#xA;SET D.BUName = S.BUName,&#xA;    D.BUType = S.BUType,&#xA;    D.ReportingBUType = S.ReportingBUType,&#xA;    D.ReportingBUId = S.ReportingBUId,&#xA;    D.State = S.State,&#xA;    D.District = S.District,&#xA;    D.LocationStatus = S.LocationStatus,&#xA;    D.PostalCode = S.PostalCode&#xA;FROM [dbo].[Mst_BUnitTbl] D&#xA;INNER JOIN [dbo].[Staging_Mst_BUnitTbl] S&#xA;    ON D.BUId = S.BUId;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="UPDATE D&#xA;SET &#xA;    D.BranchID = S.BranchID,&#xA;    D.DisbursementID = S.DisbursementID,&#xA;    D.CustomerInfoID = S.CustomerInfoID,&#xA;    D.Writeoff_Date = S.Writeoff_Date,&#xA;    D.OutStanding = S.OutStanding,&#xA;    D.Remark = S.Remark,&#xA;    D.SerialNo = S.SerialNo&#xA;FROM [dbo].[Trn_Audit_WriteOffLoanAccounts] D&#xA;INNER JOIN [dbo].[Staging_Trn_Audit_WriteOffLoanAccounts] S&#xA;    ON D.SerialNo = S.SerialNo;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable

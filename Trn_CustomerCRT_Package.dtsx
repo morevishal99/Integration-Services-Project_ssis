@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="3/17/2025 6:18:01 PM"
+  DTS:CreationDate="4/15/2025 12:52:07 PM"
   DTS:CreationName="Microsoft.Package"
-  DTS:CreatorComputerName="LAPTOP-BVOS04BH"
-  DTS:CreatorName="LAPTOP-BVOS04BH\digvi"
-  DTS:DTSID="{F12140E4-F7A9-45B1-ABC8-CC6999BC687D}"
+  DTS:CreatorComputerName="VISHAL"
+  DTS:CreatorName="VISHAL\morev"
+  DTS:DTSID="{FBD2BA50-ED91-40FF-B0BD-2ED6C72A6954}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5685.0"
-  DTS:LocaleID="16393"
+  DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{40CD5B19-E6FC-4E2C-B093-F15C917DCF9F}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{6611DFFE-4F2B-4D25-BE8F-9AC81B19DA00}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{EF9B89EA-37F6-42D8-8688-CEC38A969B16}"
+      DTS:DTSID="{0D8276E4-6E65-41F0-BCD7-0B5536DB6F07}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="LogId">
@@ -31,7 +31,7 @@
       DTS:refId="Package\End Log for ETL Execution"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{041ff2da-7d9c-498d-9e60-cfeda9bc0e93}"
+      DTS:DTSID="{91766e00-0072-43ef-a3ec-2f8924b4112b}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="End Log for ETL Execution"
@@ -55,7 +55,7 @@
       DTS:refId="Package\Extract and Load Data"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{ad8bccac-61d6-4e21-bfe3-8d45068fa6a9}"
+      DTS:DTSID="{0ab05b87-03f9-4b6c-9c7b-dcd76c802c26}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Extract and Load Data"
@@ -65,7 +65,7 @@
         <DTS:EventHandler
           DTS:refId="Package\Extract and Load Data.EventHandlers[OnError]"
           DTS:CreationName="OnError"
-          DTS:DTSID="{ce866996-657d-4621-b119-99c7b10b02a4}"
+          DTS:DTSID="{b2a8a24d-9622-4f12-9285-ee1ce1f053db}"
           DTS:EventID="-494229152"
           DTS:EventName="OnError"
           DTS:LocaleID="-1">
@@ -73,7 +73,7 @@
             <DTS:Variable
               DTS:CreationName=""
               DTS:Description="The propagate property of the event"
-              DTS:DTSID="{37a75994-63e0-428d-b860-8c42b95046ea}"
+              DTS:DTSID="{12f7fc2f-0f6b-4475-90ef-326f2caa6e7e}"
               DTS:IncludeInDebugDump="6789"
               DTS:Namespace="System"
               DTS:ObjectName="Propagate">
@@ -86,7 +86,7 @@
               DTS:refId="Package\Extract and Load Data.EventHandlers[OnError]\Error Log for ETL Execution"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Execute SQL Task"
-              DTS:DTSID="{8a4aca0d-f2ce-46b8-a4d2-e3333c8daea1}"
+              DTS:DTSID="{5b052722-7045-4d3b-a3d3-4e3bd271de81}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="Error Log for ETL Execution"
@@ -126,14 +126,14 @@
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Mst_DeathClaim]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Trn_CustomerCRT]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Mst_DeathClaim]) [refTable]
-where [refTable].[DeathClaimId] = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Trn_CustomerCRT]) [refTable]
+where [refTable].[CustCrtId] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -164,12 +164,12 @@ where [refTable].[DeathClaimId] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DeathClaimId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CustomerId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CustDeathDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsCustDeath" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CoAppID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CoAppDeathDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsCoAppDeath" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedBy" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="BranchId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CenterId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProcessDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SettelmentDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DisbursementID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CustCrtId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="BranchID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CustInfoId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CustStatus" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CRTId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CRTDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="GroupID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LoanAmt" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsActive" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedBy" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedBy" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AccountID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DeathClaimId]};</property>
+                  name="ParameterMap">#{Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustCrtId]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -193,15 +193,15 @@ where [refTable].[DeathClaimId] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Extract and Load Data\Lookup.Inputs[Lookup Input].Columns[DeathClaimId]"
+                      refId="Package\Extract and Load Data\Lookup.Inputs[Lookup Input].Columns[CustCrtId]"
                       cachedDataType="i4"
-                      cachedName="DeathClaimId"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DeathClaimId]">
+                      cachedName="CustCrtId"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustCrtId]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">DeathClaimId</property>
+                          name="JoinToReferenceColumn">CustCrtId</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -221,17 +221,199 @@ where [refTable].[DeathClaimId] = ?</property>
                   synchronousInputId="Package\Extract and Load Data\Lookup.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[DeathClaimId]"
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CustCrtId]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[DeathClaimId]"
-                      name="DeathClaimId"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CustCrtId]"
+                      name="CustCrtId"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">DeathClaimId</property>
+                          name="CopyFromReferenceColumn">CustCrtId</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[BranchID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[BranchID]"
+                      name="BranchID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">BranchID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CustInfoId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CustInfoId]"
+                      name="CustInfoId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CustInfoId</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CustStatus]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CustStatus]"
+                      name="CustStatus"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CustStatus</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CRTId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CRTId]"
+                      name="CRTId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CRTId</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CRTDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CRTDate]"
+                      name="CRTDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CRTDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[GroupID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[GroupID]"
+                      name="GroupID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">GroupID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[LoanAmt]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[LoanAmt]"
+                      name="LoanAmt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">LoanAmt</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IsActive]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[IsActive]"
+                      name="IsActive"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IsActive</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CreatedDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">UpdatedDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CreatedBy]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[CreatedBy]"
+                      name="CreatedBy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CreatedBy</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[UpdatedBy]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[UpdatedBy]"
+                      name="UpdatedBy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">UpdatedBy</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[AccountID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[AccountID]"
+                      name="AccountID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">AccountID</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -285,7 +467,7 @@ where [refTable].[DeathClaimId] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Mst_DeathClaim]</property>
+                  name="OpenRowset">[dbo].[Trn_CustomerCRT]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -354,108 +536,74 @@ where [refTable].[DeathClaimId] = ?</property>
                       externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedBy]"
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedBy]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DeathClaimId]"
-                      cachedDataType="i4"
-                      cachedName="DeathClaimId"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeathClaimId]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DeathClaimId]" />
-                    <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CustomerId]"
-                      cachedDataType="i4"
-                      cachedName="CustomerId"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerId]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerId]" />
-                    <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CustDeathDate]"
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="CustDeathDate"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustDeathDate]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustDeathDate]" />
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedDate]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsCustDeath]"
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UpdatedBy]"
+                      cachedDataType="i4"
+                      cachedName="UpdatedBy"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedBy]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedBy]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LoanAmt]"
+                      cachedDataType="cy"
+                      cachedName="LoanAmt"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoanAmt]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoanAmt]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsActive]"
                       cachedDataType="bool"
-                      cachedName="IsCustDeath"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsCustDeath]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsCustDeath]" />
+                      cachedName="IsActive"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsActive]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsActive]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CoAppID]"
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GroupID]"
                       cachedDataType="i4"
-                      cachedName="CoAppID"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CoAppID]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CoAppID]" />
+                      cachedName="GroupID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GroupID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[GroupID]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CoAppDeathDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="CoAppDeathDate"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CoAppDeathDate]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CoAppDeathDate]" />
-                    <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsCoAppDeath]"
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CustStatus]"
                       cachedDataType="bool"
-                      cachedName="IsCoAppDeath"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsCoAppDeath]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsCoAppDeath]" />
+                      cachedName="CustStatus"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustStatus]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustStatus]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BranchId]"
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CustInfoId]"
                       cachedDataType="i4"
-                      cachedName="BranchId"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BranchId]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchId]" />
+                      cachedName="CustInfoId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustInfoId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustInfoId]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CenterId]"
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CRTId]"
                       cachedDataType="i4"
-                      cachedName="CenterId"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CenterId]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CenterId]" />
+                      cachedName="CRTId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRTId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CRTId]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProcessDate]"
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CRTDate]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="ProcessDate"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDate]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProcessDate]" />
+                      cachedName="CRTDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRTDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CRTDate]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SettelmentDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="SettelmentDate"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SettelmentDate]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[SettelmentDate]" />
-                    <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DisbursementID]"
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BranchID]"
                       cachedDataType="i4"
-                      cachedName="DisbursementID"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisbursementID]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisbursementID]" />
+                      cachedName="BranchID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BranchID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchID]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AccountID]"
+                      cachedDataType="i4"
+                      cachedName="AccountID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AccountID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[AccountID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeathClaimId]"
-                      dataType="i4"
-                      name="DeathClaimId" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerId]"
-                      dataType="i4"
-                      name="CustomerId" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustDeathDate]"
-                      dataType="dbTimeStamp"
-                      name="CustDeathDate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsCustDeath]"
-                      dataType="bool"
-                      name="IsCustDeath" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CoAppID]"
-                      dataType="i4"
-                      name="CoAppID" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CoAppDeathDate]"
-                      dataType="dbTimeStamp"
-                      name="CoAppDeathDate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsCoAppDeath]"
-                      dataType="bool"
-                      name="IsCoAppDeath" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedBy]"
                       dataType="i4"
@@ -465,25 +613,53 @@ where [refTable].[DeathClaimId] = ?</property>
                       dataType="dbTimeStamp"
                       name="CreatedDate" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BranchId]"
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustCrtId]"
                       dataType="i4"
-                      name="BranchId" />
+                      name="CustCrtId" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CenterId]"
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BranchID]"
                       dataType="i4"
-                      name="CenterId" />
+                      name="BranchID" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDate]"
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustInfoId]"
+                      dataType="i4"
+                      name="CustInfoId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustStatus]"
+                      dataType="bool"
+                      name="CustStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRTId]"
+                      dataType="i4"
+                      name="CRTId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRTDate]"
                       dataType="dbTimeStamp"
-                      name="ProcessDate" />
+                      name="CRTDate" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SettelmentDate]"
-                      dataType="dbTimeStamp"
-                      name="SettelmentDate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DisbursementID]"
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GroupID]"
                       dataType="i4"
-                      name="DisbursementID" />
+                      name="GroupID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoanAmt]"
+                      dataType="cy"
+                      name="LoanAmt" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsActive]"
+                      dataType="bool"
+                      name="IsActive" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedBy]"
+                      dataType="i4"
+                      name="UpdatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AccountID]"
+                      dataType="i4"
+                      name="AccountID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -528,7 +704,7 @@ where [refTable].[DeathClaimId] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Mst_DeathClaim]</property>
+                  name="OpenRowset">[dbo].[Trn_CustomerCRT]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -592,130 +768,112 @@ where [refTable].[DeathClaimId] = ?</property>
                       name="CreatedBy"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DeathClaimId]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustCrtId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DeathClaimId]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DeathClaimId]"
-                      name="DeathClaimId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustCrtId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustCrtId]"
+                      name="CustCrtId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerId]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustomerId]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerId]"
-                      name="CustomerId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BranchID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchID]"
+                      name="BranchID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustDeathDate]"
-                      dataType="dbTimeStamp"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustInfoId]"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustDeathDate]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustDeathDate]"
-                      name="CustDeathDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustInfoId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustInfoId]"
+                      name="CustInfoId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsCustDeath]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustStatus]"
                       dataType="bool"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsCustDeath]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsCustDeath]"
-                      name="IsCustDeath"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustStatus]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustStatus]"
+                      name="CustStatus"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CoAppID]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CRTId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CoAppID]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CoAppID]"
-                      name="CoAppID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CRTId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CRTId]"
+                      name="CRTId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CoAppDeathDate]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CRTDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CoAppDeathDate]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CoAppDeathDate]"
-                      name="CoAppDeathDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CRTDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CRTDate]"
+                      name="CRTDate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsCoAppDeath]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[GroupID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GroupID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[GroupID]"
+                      name="GroupID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoanAmt]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LoanAmt]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoanAmt]"
+                      name="LoanAmt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsActive]"
                       dataType="bool"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsCoAppDeath]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsCoAppDeath]"
-                      name="IsCoAppDeath"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsActive]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsActive]"
+                      name="IsActive"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchId]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BranchId]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchId]"
-                      name="BranchId"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CenterId]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CenterId]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CenterId]"
-                      name="CenterId"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProcessDate]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProcessDate]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProcessDate]"
-                      name="ProcessDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsPreSettelment]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsPreSettelment]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsPreSettelment]"
-                      name="IsPreSettelment"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[SettelmentDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SettelmentDate]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[SettelmentDate]"
-                      name="SettelmentDate"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClaimSubmittedDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ClaimSubmittedDate]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClaimSubmittedDate]"
-                      name="ClaimSubmittedDate"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisbursementID]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedBy]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DisbursementID]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisbursementID]"
-                      name="DisbursementID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdatedBy]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedBy]"
+                      name="UpdatedBy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[AccountID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AccountID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[AccountID]"
+                      name="AccountID"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -729,121 +887,53 @@ where [refTable].[DeathClaimId] = ?</property>
                       dataType="i4"
                       name="CreatedBy" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DeathClaimId]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustCrtId]"
                       dataType="i4"
-                      name="DeathClaimId" />
+                      name="CustCrtId" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustomerId]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BranchID]"
                       dataType="i4"
-                      name="CustomerId" />
+                      name="BranchID" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustDeathDate]"
-                      dataType="dbTimeStamp"
-                      name="CustDeathDate" />
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustInfoId]"
+                      dataType="i4"
+                      name="CustInfoId" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsCustDeath]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustStatus]"
                       dataType="bool"
-                      name="IsCustDeath" />
+                      name="CustStatus" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CoAppID]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CRTId]"
                       dataType="i4"
-                      name="CoAppID" />
+                      name="CRTId" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CoAppDeathDate]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CRTDate]"
                       dataType="dbTimeStamp"
-                      name="CoAppDeathDate" />
+                      name="CRTDate" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsCoAppDeath]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GroupID]"
+                      dataType="i4"
+                      name="GroupID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LoanAmt]"
+                      dataType="cy"
+                      name="LoanAmt" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsActive]"
                       dataType="bool"
-                      name="IsCoAppDeath" />
+                      name="IsActive" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BranchId]"
-                      dataType="i4"
-                      name="BranchId" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CenterId]"
-                      dataType="i4"
-                      name="CenterId" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProcessDate]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
                       dataType="dbTimeStamp"
-                      name="ProcessDate" />
+                      name="UpdatedDate" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsPreSettelment]"
-                      dataType="bool"
-                      name="IsPreSettelment" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SettelmentDate]"
-                      dataType="dbTimeStamp"
-                      name="SettelmentDate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ClaimSubmittedDate]"
-                      dataType="dbTimeStamp"
-                      name="ClaimSubmittedDate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DisbursementID]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdatedBy]"
                       dataType="i4"
-                      name="DisbursementID" />
+                      name="UpdatedBy" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsClaim]"
-                      dataType="bool"
-                      name="IsClaim" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsSettle]"
-                      dataType="bool"
-                      name="IsSettle" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TotalRecovery]"
-                      dataType="cy"
-                      name="TotalRecovery" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PremiumAmt]"
-                      dataType="cy"
-                      name="PremiumAmt" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdateBy_Setlm]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AccountID]"
                       dataType="i4"
-                      name="UpdateBy_Setlm" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate_Setlm]"
-                      dataType="dbTimeStamp"
-                      name="UpdatedDate_Setlm" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdateBy_Claim]"
-                      dataType="i4"
-                      name="UpdateBy_Claim" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate_Claim]"
-                      dataType="dbTimeStamp"
-                      name="UpdatedDate_Claim" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[REFID]"
-                      dataType="i4"
-                      name="REFID" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsSave]"
-                      dataType="i4"
-                      name="IsSave" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsSubmit]"
-                      dataType="i4"
-                      name="IsSubmit" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SaveSettlementAmt]"
-                      dataType="cy"
-                      name="SaveSettlementAmt" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[WriteOffAmt]"
-                      dataType="cy"
-                      name="WriteOffAmt" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PayableAmt]"
-                      dataType="cy"
-                      name="PayableAmt" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[C_SubmittedDate]"
-                      dataType="dbTimeStamp"
-                      name="C_SubmittedDate" />
+                      name="AccountID" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -874,75 +964,65 @@ where [refTable].[DeathClaimId] = ?</property>
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CreatedBy]"
                       name="CreatedBy" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DeathClaimId]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustCrtId]"
                       dataType="i4"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DeathClaimId]"
-                      name="DeathClaimId" />
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustCrtId]"
+                      name="CustCrtId" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustomerId]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BranchID]"
                       dataType="i4"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustomerId]"
-                      name="CustomerId" />
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BranchID]"
+                      name="BranchID" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustDeathDate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustDeathDate]"
-                      name="CustDeathDate" />
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustInfoId]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustInfoId]"
+                      name="CustInfoId" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsCustDeath]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustStatus]"
                       dataType="bool"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsCustDeath]"
-                      name="IsCustDeath" />
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustStatus]"
+                      name="CustStatus" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CoAppID]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CRTId]"
                       dataType="i4"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CoAppID]"
-                      name="CoAppID" />
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CRTId]"
+                      name="CRTId" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CoAppDeathDate]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CRTDate]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CoAppDeathDate]"
-                      name="CoAppDeathDate" />
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CRTDate]"
+                      name="CRTDate" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsCoAppDeath]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GroupID]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GroupID]"
+                      name="GroupID" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LoanAmt]"
+                      dataType="cy"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LoanAmt]"
+                      name="LoanAmt" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsActive]"
                       dataType="bool"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsCoAppDeath]"
-                      name="IsCoAppDeath" />
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsActive]"
+                      name="IsActive" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BranchId]"
-                      dataType="i4"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BranchId]"
-                      name="BranchId" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CenterId]"
-                      dataType="i4"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CenterId]"
-                      name="CenterId" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ProcessDate]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ProcessDate]"
-                      name="ProcessDate" />
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
+                      name="UpdatedDate" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsPreSettelment]"
-                      dataType="bool"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsPreSettelment]"
-                      name="IsPreSettelment" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SettelmentDate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SettelmentDate]"
-                      name="SettelmentDate" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ClaimSubmittedDate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ClaimSubmittedDate]"
-                      name="ClaimSubmittedDate" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DisbursementID]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UpdatedBy]"
                       dataType="i4"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DisbursementID]"
-                      name="DisbursementID" />
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UpdatedBy]"
+                      name="UpdatedBy" />
+                    <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AccountID]"
+                      dataType="i4"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AccountID]"
+                      name="AccountID" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -964,7 +1044,7 @@ where [refTable].[DeathClaimId] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Staging_Mst_DeathClaim]</property>
+                  name="OpenRowset">[dbo].[Trn_CustomerCRT]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1033,102 +1113,74 @@ where [refTable].[DeathClaimId] = ?</property>
                       externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CreatedBy]"
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedBy]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CustomerId]"
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[BranchID]"
                       cachedDataType="i4"
-                      cachedName="CustomerId"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CustomerId]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerId]" />
+                      cachedName="BranchID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BranchID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchID]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CustDeathDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="CustDeathDate"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CustDeathDate]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustDeathDate]" />
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CustInfoId]"
+                      cachedDataType="i4"
+                      cachedName="CustInfoId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CustInfoId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustInfoId]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[IsCustDeath]"
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CustStatus]"
                       cachedDataType="bool"
-                      cachedName="IsCustDeath"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsCustDeath]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsCustDeath]" />
+                      cachedName="CustStatus"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CustStatus]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustStatus]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CoAppID]"
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CRTId]"
                       cachedDataType="i4"
-                      cachedName="CoAppID"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CoAppID]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CoAppID]" />
+                      cachedName="CRTId"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CRTId]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CRTId]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CoAppDeathDate]"
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CRTDate]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="CoAppDeathDate"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CoAppDeathDate]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CoAppDeathDate]" />
+                      cachedName="CRTDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CRTDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CRTDate]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[IsCoAppDeath]"
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[GroupID]"
+                      cachedDataType="i4"
+                      cachedName="GroupID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[GroupID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[GroupID]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[LoanAmt]"
+                      cachedDataType="cy"
+                      cachedName="LoanAmt"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[LoanAmt]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoanAmt]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[IsActive]"
                       cachedDataType="bool"
-                      cachedName="IsCoAppDeath"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsCoAppDeath]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsCoAppDeath]" />
+                      cachedName="IsActive"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsActive]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsActive]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[BranchId]"
-                      cachedDataType="i4"
-                      cachedName="BranchId"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BranchId]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchId]" />
-                    <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CenterId]"
-                      cachedDataType="i4"
-                      cachedName="CenterId"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CenterId]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CenterId]" />
-                    <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[ProcessDate]"
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="ProcessDate"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDate]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProcessDate]" />
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedDate]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[DisbursementID]"
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[UpdatedBy]"
                       cachedDataType="i4"
-                      cachedName="DisbursementID"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisbursementID]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[DisbursementID]" />
+                      cachedName="UpdatedBy"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedBy]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedBy]" />
                     <inputColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[DeathClaimId]"
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[AccountID]"
                       cachedDataType="i4"
-                      cachedName="DeathClaimId"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DeathClaimId]"
-                      lineageId="Package\Extract and Load Data\Lookup.Outputs[Lookup Match Output].Columns[DeathClaimId]" />
+                      cachedName="AccountID"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[AccountID]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[AccountID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DeathClaimId]"
-                      dataType="i4"
-                      name="DeathClaimId" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CustomerId]"
-                      dataType="i4"
-                      name="CustomerId" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CustDeathDate]"
-                      dataType="dbTimeStamp"
-                      name="CustDeathDate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsCustDeath]"
-                      dataType="bool"
-                      name="IsCustDeath" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CoAppID]"
-                      dataType="i4"
-                      name="CoAppID" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CoAppDeathDate]"
-                      dataType="dbTimeStamp"
-                      name="CoAppDeathDate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsCoAppDeath]"
-                      dataType="bool"
-                      name="IsCoAppDeath" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CreatedBy]"
                       dataType="i4"
@@ -1138,25 +1190,53 @@ where [refTable].[DeathClaimId] = ?</property>
                       dataType="dbTimeStamp"
                       name="CreatedDate" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BranchId]"
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CustCrtId]"
                       dataType="i4"
-                      name="BranchId" />
+                      name="CustCrtId" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CenterId]"
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[BranchID]"
                       dataType="i4"
-                      name="CenterId" />
+                      name="BranchID" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDate]"
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CustInfoId]"
+                      dataType="i4"
+                      name="CustInfoId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CustStatus]"
+                      dataType="bool"
+                      name="CustStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CRTId]"
+                      dataType="i4"
+                      name="CRTId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CRTDate]"
                       dataType="dbTimeStamp"
-                      name="ProcessDate" />
+                      name="CRTDate" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[SettlementDate]"
-                      dataType="dbTimeStamp"
-                      name="SettlementDate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[DisbursementID]"
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[GroupID]"
                       dataType="i4"
-                      name="DisbursementID" />
+                      name="GroupID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[LoanAmt]"
+                      dataType="cy"
+                      name="LoanAmt" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[IsActive]"
+                      dataType="bool"
+                      name="IsActive" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedBy]"
+                      dataType="i4"
+                      name="UpdatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[AccountID]"
+                      dataType="i4"
+                      name="AccountID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1210,7 +1290,7 @@ where [refTable].[DeathClaimId] = ?</property>
       DTS:refId="Package\Inner Join Staging to Destination"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{f8cc3289-afa3-47ee-8917-f18aa9ee5f70}"
+      DTS:DTSID="{b8cb574a-41e9-481f-baf8-d7df6f397f98}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Inner Join Staging to Destination"
@@ -1220,14 +1300,14 @@ where [refTable].[DeathClaimId] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
-          SQLTask:SqlStatementSource="UPDATE D&#xA;SET D.CustomerId = S.CustomerId,&#xA;    D.CustDeathDate = S.CustDeathDate,&#xA;    D.IsCustDeath = S.IsCustDeath,&#xA;    D.CoAppID = S.CoAppID,&#xA;    D.CoAppDeathDate = S.CoAppDeathDate,&#xA;    D.IsCoAppDeath = S.IsCoAppDeath,&#xA;    D.CreatedBy = S.CreatedBy,&#xA;    D.CreatedDate = S.CreatedDate,&#xA;    D.BranchId = S.BranchId,&#xA;    D.CenterId = S.CenterId,&#xA;    D.ProcessDate = S.ProcessDate,&#xA;    D.SettelmentDate = S.SettelmentDate,&#xA;    D.DisbursementID = S.DisbursementID&#xA;FROM [dbo].[Mst_DeathClaim] D&#xA;INNER JOIN [dbo].[Staging_Mst_DeathClaim] S&#xA;    ON D.DeathClaimId = S.DeathClaimId;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="UPDATE D&#xA;SET &#xA;    D.BranchID = S.BranchID,&#xA;    D.CustInfoId = S.CustInfoId,&#xA;    D.CustStatus = S.CustStatus,&#xA;    D.CRTId = S.CRTId,&#xA;    D.CRTDate = S.CRTDate,&#xA;    D.GroupID = S.GroupID,&#xA;    D.LoanAmt = S.LoanAmt,&#xA;    D.IsActive = S.IsActive,&#xA;    D.CreatedDate = S.CreatedDate,&#xA;    D.UpdatedDate = S.UpdatedDate,&#xA;    D.CreatedBy = S.CreatedBy,&#xA;    D.UpdatedBy = S.UpdatedBy,&#xA;    D.AccountID = S.AccountID&#xA;FROM dbo.Trn_CustomerCRT D&#xA;INNER JOIN dbo.Staging_Trn_CustomerCRT S&#xA;    ON D.CustCrtId = S.CustCrtId;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Start Log for ETL Execution"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{6b1a8e0f-8af0-4845-bc0d-702f2bcf62b9}"
+      DTS:DTSID="{4c32b2eb-d1ee-4a0a-bd0a-be7c3a13e60a}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Start Log for ETL Execution"
@@ -1237,7 +1317,7 @@ where [refTable].[DeathClaimId] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
-          SQLTask:SqlStatementSource="INSERT INTO dbo.ETL_Execution_Log (PackageName, Status)  &#xA;VALUES ('ETL_Upsert_Mst_DeathClaim_Package', 'Running');&#xA;SELECT SCOPE_IDENTITY();"
+          SQLTask:SqlStatementSource="INSERT INTO dbo.ETL_Execution_Log (PackageName, Status)  &#xA;VALUES ('ETL_Upsert_Trn_CustomerCRT_Package', 'Running');&#xA;SELECT SCOPE_IDENTITY();"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="0"
@@ -1249,7 +1329,7 @@ where [refTable].[DeathClaimId] = ?</property>
       DTS:refId="Package\Truncate Staging Table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Clear Staging Table"
-      DTS:DTSID="{8c77d90d-4425-4dcf-848c-06a0bd850e45}"
+      DTS:DTSID="{9bba3526-de99-4351-96b6-b2709f8810ed}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate Staging Table"
@@ -1259,7 +1339,7 @@ where [refTable].[DeathClaimId] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Staging_Mst_DeathClaim;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Staging_Trn_CustomerCRT;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1267,7 +1347,7 @@ where [refTable].[DeathClaimId] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{67f42019-34e6-45cb-a00c-50cf561ec4a2}"
+      DTS:DTSID="{fae42a73-8500-4a53-a339-58d295abbaf0}"
       DTS:From="Package\Truncate Staging Table"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -1275,7 +1355,7 @@ where [refTable].[DeathClaimId] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{0b347ca6-e612-49fe-a090-8aa88a9d033c}"
+      DTS:DTSID="{c8a609e2-2611-47a0-b0ff-b80208fefe6f}"
       DTS:From="Package\Extract and Load Data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -1283,7 +1363,7 @@ where [refTable].[DeathClaimId] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{1173c481-8b40-4909-9d29-43b64b66ae52}"
+      DTS:DTSID="{075DC745-AF10-43D7-8E7E-D6310ACD3976}"
       DTS:From="Package\Start Log for ETL Execution"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
@@ -1291,59 +1371,12 @@ where [refTable].[DeathClaimId] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
-      DTS:DTSID="{f6b0715e-703d-4f33-a129-676abcbf3e4f}"
+      DTS:DTSID="{1e450710-24ad-4e56-bb87-45f67cd23bc5}"
       DTS:From="Package\Inner Join Staging to Destination"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\End Log for ETL Execution" />
   </DTS:PrecedenceConstraints>
-  <DTS:EventHandlers>
-    <DTS:EventHandler
-      DTS:refId="Package.EventHandlers[OnError]"
-      DTS:CreationName="OnError"
-      DTS:DTSID="{A1854EFB-C607-47DF-9B46-D88D72C2837B}"
-      DTS:EventID="0"
-      DTS:EventName="OnError"
-      DTS:LocaleID="-1">
-      <DTS:Variables>
-        <DTS:Variable
-          DTS:CreationName=""
-          DTS:Description="The propagate property of the event"
-          DTS:DTSID="{E49DC80D-418C-46D9-840A-0E0B7C976A30}"
-          DTS:IncludeInDebugDump="6789"
-          DTS:Namespace="System"
-          DTS:ObjectName="Propagate">
-          <DTS:VariableValue
-            DTS:DataType="11">-1</DTS:VariableValue>
-        </DTS:Variable>
-      </DTS:Variables>
-      <DTS:Executables>
-        <DTS:Executable
-          DTS:refId="Package.EventHandlers[OnError]\Error Log for ETL Execution"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
-          DTS:DTSID="{3bde102a-6497-49b1-9079-51704b6fc607}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Error Log for ETL Execution"
-          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
-              SQLTask:SqlStatementSource="UPDATE dbo.ETL_Execution_Log  &#xA;SET ExecutionEndTime = GETDATE(), Status = 'Failed', ErrorMessage = ?  &#xA;WHERE LogId = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-              <SQLTask:ParameterBinding
-                SQLTask:ParameterName="0"
-                SQLTask:DtsVariableName="User::LogId"
-                SQLTask:ParameterDirection="Input"
-                SQLTask:DataType="3"
-                SQLTask:ParameterSize="-1" />
-            </SQLTask:SqlTaskData>
-          </DTS:ObjectData>
-        </DTS:Executable>
-      </DTS:Executables>
-    </DTS:EventHandler>
-  </DTS:EventHandlers>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -1359,7 +1392,7 @@ where [refTable].[DeathClaimId] = ?</property>
         <NodeLayout
           Size="202.4,41.6"
           Id="Package\End Log for ETL Execution"
-          TopLeft="70.499999726812,370.277777406132" />
+          TopLeft="72.166666302416,370.277777406132" />
         <NodeLayout
           Size="181.6,41.6"
           Id="Package\Extract and Load Data"
@@ -1368,10 +1401,6 @@ where [refTable].[DeathClaimId] = ?</property>
           Size="228.8,41.6"
           Id="Package\Inner Join Staging to Destination"
           TopLeft="60,295.299998363753" />
-        <NodeLayout
-          Size="205.6,41.6"
-          Id="Package\Start Log for ETL Execution"
-          TopLeft="68.472221759321,60" />
         <NodeLayout
           Size="186.4,41.6"
           Id="Package\Truncate Staging Table"
@@ -1421,19 +1450,19 @@ where [refTable].[DeathClaimId] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="173.019443894275,101.6">
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="173.883333151208,336.899998363753">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37.9999994847179"
+              EndConnector="0,33.377779042379"
               Start="0,0"
-              End="0,30.4999994847179">
+              End="0,25.877779042379">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.4999994847179" />
+                    End="0,25.877779042379" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1442,20 +1471,36 @@ where [refTable].[DeathClaimId] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="205.6,41.6"
+          Id="Package\Start Log for ETL Execution"
+          TopLeft="115.833327004479,64.1333328873581" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="173.049999863406,336.899998363753">
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="218.633327004479,105.733332887358">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33.3777790423785"
+              EndConnector="-48.2666609752513,33.8666665973599"
               Start="0,0"
-              End="0,25.8777790423785">
+              End="-48.2666609752513,26.3666665973599">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.8777790423785" />
+                    End="0,12.9333332986799" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.9333332986799"
+                    Point2="0,16.9333332986799"
+                    Point3="-4,16.9333332986799" />
+                  <mssgle:LineSegment
+                    End="-44.2666609752513,16.9333332986799" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-44.2666609752513,16.9333332986799"
+                    Point2="-48.2666609752513,16.9333332986799"
+                    Point3="-48.2666609752513,20.9333332986799" />
+                  <mssgle:LineSegment
+                    End="-48.2666609752513,26.3666665973599" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1467,18 +1512,6 @@ where [refTable].[DeathClaimId] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </Package>
-  <DtsEventHandler
-    design-time-name="Package.EventHandlers[OnError]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="207.2,41.6"
-          Id="Package.EventHandlers[OnError]\Error Log for ETL Execution"
-          TopLeft="360.999995514751,184.999998137355" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
   <TaskHost
     design-time-name="Package\Extract and Load Data">
     <LayoutInfo>
@@ -1591,9 +1624,7 @@ where [refTable].[DeathClaimId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1656,17 +1687,17 @@ where [refTable].[DeathClaimId] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Mst_DeathClaim]</Value>
+          type="q3:string">[dbo].[Trn_CustomerCRT]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
