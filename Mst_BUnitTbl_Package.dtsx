@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Mst_BUnitTbl_Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{F908E7B2-3DFF-4DD6-A050-6FC83853AC3A}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{4C249F55-A31B-4472-A7A5-CC47004FD6FB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -882,49 +882,22 @@ where [refTable].[BUId] = ?</property>
                       name="PAR"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[FAuthtwo]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsScore]"
                       dataType="bool"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FAuthtwo]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[FAuthtwo]"
-                      name="FAuthtwo"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsScore]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsScore]"
+                      name="IsScore"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsNuScore]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[fauthtwo]"
                       dataType="bool"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsNuScore]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsNuScore]"
-                      name="IsNuScore"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsEKYCAllow]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsEKYCAllow]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsEKYCAllow]"
-                      name="IsEKYCAllow"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsLeegality]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsLeegality]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsLeegality]"
-                      name="IsLeegality"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[SMS_SERVICE]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SMS_SERVICE]"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[SMS_SERVICE]"
-                      name="SMS_SERVICE"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[fauthtwo]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[fauthtwo]"
+                      name="fauthtwo"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -1092,28 +1065,16 @@ where [refTable].[BUId] = ?</property>
                       name="InsuCoId" />
                     <externalMetadataColumn
                       refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PAR]"
-                      dataType="i4"
+                      dataType="cy"
                       name="PAR" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FAuthtwo]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsScore]"
                       dataType="bool"
-                      name="FAuthtwo" />
+                      name="IsScore" />
                     <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsNuScore]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[fauthtwo]"
                       dataType="bool"
-                      name="IsNuScore" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsEKYCAllow]"
-                      dataType="bool"
-                      name="IsEKYCAllow" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsLeegality]"
-                      dataType="bool"
-                      name="IsLeegality" />
-                    <externalMetadataColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SMS_SERVICE]"
-                      dataType="bool"
-                      name="SMS_SERVICE" />
+                      name="fauthtwo" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1312,40 +1273,25 @@ where [refTable].[BUId] = ?</property>
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsEquifax]"
                       name="IsEquifax" />
                     <outputColumn
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsScore]"
+                      dataType="bool"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsScore]"
+                      name="IsScore" />
+                    <outputColumn
                       refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InsuCoId]"
                       dataType="i4"
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InsuCoId]"
                       name="InsuCoId" />
                     <outputColumn
                       refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PAR]"
-                      dataType="i4"
+                      dataType="cy"
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PAR]"
                       name="PAR" />
                     <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FAuthtwo]"
+                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[fauthtwo]"
                       dataType="bool"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FAuthtwo]"
-                      name="FAuthtwo" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsNuScore]"
-                      dataType="bool"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsNuScore]"
-                      name="IsNuScore" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsEKYCAllow]"
-                      dataType="bool"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsEKYCAllow]"
-                      name="IsEKYCAllow" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsLeegality]"
-                      dataType="bool"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsLeegality]"
-                      name="IsLeegality" />
-                    <outputColumn
-                      refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SMS_SERVICE]"
-                      dataType="bool"
-                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SMS_SERVICE]"
-                      name="SMS_SERVICE" />
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[fauthtwo]"
+                      name="fauthtwo" />
                     <outputColumn
                       refId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -1878,39 +1824,17 @@ where [refTable].[BUId] = ?</property>
           Id="Package\Extract and Load Data\OLE DB Destination"
           TopLeft="297.499983745317,272.999998101592" />
         <NodeLayout
-          Size="152,41.6"
-          Id="Package\Extract and Load Data\OLE DB Source"
-          TopLeft="433.999993532896,48.9999992698431" />
+          Size="154.4,41.6"
+          Id="Package\Extract and Load Data\OLE DB Staging"
+          TopLeft="526.190447440698,273.619045716335" />
         <NodeLayout
           Size="112.8,41.6"
           Id="Package\Extract and Load Data\Lookup"
           TopLeft="447.999975822867,150.233332326876" />
         <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Extract and Load Data\OLE DB Staging"
-          TopLeft="526.190447440698,273.619045716335" />
-        <EdgeLayout
-          Id="Package\Extract and Load Data.Paths[OLE DB Source Output]"
-          TopLeft="507.199984677882,90.5999992698431">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.6333330570329"
-              Start="0,0"
-              End="0,52.1333330570329">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.1333330570329" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="152,41.6"
+          Id="Package\Extract and Load Data\OLE DB Source"
+          TopLeft="433.999993532896,48.9999992698431" />
         <EdgeLayout
           Id="Package\Extract and Load Data.Paths[Lookup No Match Output]"
           TopLeft="486.9333091562,191.833332326876">
@@ -1981,6 +1905,28 @@ where [refTable].[BUId] = ?</property>
             <mssgm:EdgeLabel
               BoundingBox="-7.42948424316781,38.4005990345762,96.3827734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract and Load Data.Paths[OLE DB Source Output]"
+          TopLeft="507.199984677882,90.5999992698431">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.6333330570329"
+              Start="0,0"
+              End="0,52.1333330570329">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.1333330570329" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

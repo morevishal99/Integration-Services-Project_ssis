@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="VISHAL"
   DTS:CreatorName="VISHAL\morev"
-  DTS:DTSID="{1494863A-5E5F-49E9-8284-CDB5C421D7FC}"
+  DTS:DTSID="{5279734F-DFB2-46D5-8C9F-E3C198A3C34B}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5685.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="Mst_CustOtherDetails_Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{4A4354B8-719C-4B24-B46A-E620D76B750F}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{773ED7D7-DD40-4077-8D39-A0F04747BCBD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -5027,7 +5027,7 @@ where ld.actualpaiddate is null</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
-          SQLTask:SqlStatementSource="INSERT INTO dbo.ETL_Execution_Log (PackageName, Status)  &#xA;VALUES ('ETL_Upsert_Mst_CustOtherDetails_Package_new', 'Running');&#xA;SELECT SCOPE_IDENTITY();"
+          SQLTask:SqlStatementSource="INSERT INTO dbo.ETL_Execution_Log (PackageName, Status)  &#xA;VALUES ('ETL_Upsert_Mst_CustOtherDetails_Package', 'Running');&#xA;SELECT SCOPE_IDENTITY();"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="0"
@@ -5102,33 +5102,83 @@ where ld.actualpaiddate is null</property>
         <NodeLayout
           Size="202.4,41.6"
           Id="Package\End Log for ETL Execution"
-          TopLeft="101.666664390101,440.866665720476" />
+          TopLeft="404.999981150032,427.866665810876" />
         <NodeLayout
-          Size="181.6,41.6"
+          Size="195.2,41.6"
           Id="Package\Extract and Load Data"
-          TopLeft="101.666664390101,237.666665720476" />
+          TopLeft="405.833314437834,231.599999095996" />
         <NodeLayout
-          Size="228.8,41.6"
+          Size="197.6,41.6"
           Id="Package\Inner Join Staging to Destination"
-          TopLeft="101.666664390101,339.266665720476" />
+          TopLeft="359.166650320922,327.999999132156" />
+        <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\Start Log for ETL Execution"
+          TopLeft="410.833314164647,42.4000025312105" />
         <NodeLayout
           Size="186.4,41.6"
           Id="Package\Truncate Staging Table"
-          TopLeft="106.666660838657,136.066665720476" />
+          TopLeft="436.666642808253,123.066665810876" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="196.166662614379,177.666665720476">
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="508.033314164647,84.0000025312105">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="21.8333286436061,39.0666632796659"
               Start="0,0"
-              End="0,52.5">
+              End="21.8333286436061,31.5666632796659">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,15.533331639833" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.533331639833"
+                    Point2="0,19.533331639833"
+                    Point3="4,19.533331639833" />
+                  <mssgle:LineSegment
+                    End="17.8333286436061,19.533331639833" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17.8333286436061,19.533331639833"
+                    Point2="21.8333286436061,19.533331639833"
+                    Point3="21.8333286436061,23.533331639833" />
+                  <mssgle:LineSegment
+                    End="21.8333286436061,31.5666632796659" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="529.866642808253,164.666665810876">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-26.4333283704191,66.9333332851195"
+              Start="0,0"
+              End="-26.4333283704191,59.4333332851195">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.4666666425598" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.4666666425598"
+                    Point2="0,33.4666666425598"
+                    Point3="-4,33.4666666425598" />
+                  <mssgle:LineSegment
+                    End="-22.4333283704191,33.4666666425598" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.4333283704191,33.4666666425598"
+                    Point2="-26.4333283704191,33.4666666425598"
+                    Point3="-26.4333283704191,37.4666666425598" />
+                  <mssgle:LineSegment
+                    End="-26.4333283704191,59.4333332851195" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5139,30 +5189,30 @@ where ld.actualpaiddate is null</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="192.466664390101,279.266665720476">
+          TopLeft="503.433314437834,273.199999095996">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="23.6,60"
+              EndConnector="-45.4666641169117,54.8000000361603"
               Start="0,0"
-              End="23.6,52.5">
+              End="-45.4666641169117,47.3000000361603">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26" />
+                    End="0,23.4000000180802" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="4,30" />
+                    Point1="0,23.4000000180802"
+                    Point2="0,27.4000000180802"
+                    Point3="-4,27.4000000180802" />
                   <mssgle:LineSegment
-                    End="19.6,30" />
+                    End="-41.4666641169117,27.4000000180802" />
                   <mssgle:CubicBezierSegment
-                    Point1="19.6,30"
-                    Point2="23.6,30"
-                    Point3="23.6,34" />
+                    Point1="-41.4666641169117,27.4000000180802"
+                    Point2="-45.4666641169117,27.4000000180802"
+                    Point3="-45.4666641169117,31.4000000180802" />
                   <mssgle:LineSegment
-                    End="23.6,52.5" />
+                    End="-45.4666641169117,47.3000000361603" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5173,68 +5223,30 @@ where ld.actualpaiddate is null</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="216.066664390101,380.866665720476">
+          TopLeft="457.966650320922,369.599999132156">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-13.2,60"
+              EndConnector="48.2333308291096,58.2666666787196"
               Start="0,0"
-              End="-13.2,52.5">
+              End="48.2333308291096,50.7666666787196">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26" />
+                    End="0,25.1333333393598" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="-4,30" />
+                    Point1="0,25.1333333393598"
+                    Point2="0,29.1333333393598"
+                    Point3="4,29.1333333393598" />
                   <mssgle:LineSegment
-                    End="-9.20000000000002,30" />
+                    End="44.2333308291096,29.1333333393598" />
                   <mssgle:CubicBezierSegment
-                    Point1="-9.20000000000002,30"
-                    Point2="-13.2,30"
-                    Point3="-13.2,34" />
+                    Point1="44.2333308291096,29.1333333393598"
+                    Point2="48.2333308291096,29.1333333393598"
+                    Point3="48.2333308291096,33.1333333393598" />
                   <mssgle:LineSegment
-                    End="-13.2,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="205.6,41.6"
-          Id="Package\Start Log for ETL Execution"
-          TopLeft="140.833328916796,30.2666692822509" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="243.633328916796,71.8666692822509">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-43.7666680781386,64.1999964382252"
-              Start="0,0"
-              End="-43.7666680781386,56.6999964382252">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.0999982191126" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.0999982191126"
-                    Point2="0,32.0999982191126"
-                    Point3="-4,32.0999982191126" />
-                  <mssgle:LineSegment
-                    End="-39.7666680781386,32.0999982191126" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-39.7666680781386,32.0999982191126"
-                    Point2="-43.7666680781386,32.0999982191126"
-                    Point3="-43.7666680781386,36.0999982191126" />
-                  <mssgle:LineSegment
-                    End="-43.7666680781386,56.6999964382252" />
+                    End="48.2333308291096,50.7666666787196" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5286,7 +5298,9 @@ where ld.actualpaiddate is null</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout

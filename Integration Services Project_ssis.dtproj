@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-BVOS04BH</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnzV1x+a3tkOF7phK3L4RbQAAAAACAAAAAAAQZgAAAAEAACAAAAAmqnMX5HhB+xXfLsd9JvyT30l2S3TWdc09qBaA2RfB5QAAAAAOgAAAAAIAACAAAAAZAMRrVkic5DN/hSNLRd0UO6JJT2g66iBqW1r3GCDf7JAAAAB3eI1YQJVwGEpjWnRYg02bm5derPMsmxu5rCTtcq5ThS97LjYxFZrHCR80VNSCjEclvvsalExQFGao+cYL96roCKn5WiKBMvec2+PleKhvrePnEEii634HjfuNAtdrRgsnqk1+CUnmDZWHdkAzuocskAyY09/r2d+o79FsPqt6FiZcJTmg3WZT9YQnvaAvb9JAAAAA+64wkzr+DqUkGqdhWJwngLlbGMEseIcVibCa7J4aBb5KkoA1Db04JSCg/1rKgmxPUpR3utHHtO2T9eXWmw7C5g==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnzV1x+a3tkOF7phK3L4RbQAAAAACAAAAAAAQZgAAAAEAACAAAAAMTD62OHxS1QjTZ6wVoG8VvCbIV+uHFE1CQNq3mAoqzwAAAAAOgAAAAAIAACAAAABhFxD2q7LPn6NR+BmSmZUo+Qy5W1vXuWFmZemQL2CiQJAAAACyhxZ2gTlLuJhiKbRbFhH9rz+cIcjPiV/bR7uR7/7OBDeR0AZ+GNWpyRH5GVzrxtUPuQ3AkqM/Nufz5dpzpN8QbCWCqx02J6wvARHKz9xIh+qZ7dZYcQDHkxPW4LtT7ZHyYxap8xF8cMR8QZCqEvEoG5YoQ9ofrz9ZEIq92XRtBjVjwOVRwbd5mOCC1uN3e+dAAAAAy49iU5IJc3a5QBi2beJ37r7+tFGDYOOpU8zJ4Jruac2g3k28q2IGPS7yk1waNOFxJzYYm6BKpFCrHSgXdY9/iQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -54,7 +54,7 @@
           <SSIS:Package SSIS:Name="Trn_LoanSanction_Package.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Mst_BCTbl_Package.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Trn_CustomerCRT_Package.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Mst_CustOtherDetails_Package_new.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Mst_CustOtherDetails_Package.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="172.17.130.207.Sonata_Connect Destination.conmgr" />
@@ -419,10 +419,10 @@
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">11</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">10</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{B33DC32E-DD9F-42EE-9734-A1221255CA39}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{CA0305D8-8A0B-4DF7-B70C-1369EE4F1C74}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -589,10 +589,10 @@
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">15</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{40CD5B19-E6FC-4E2C-B093-F15C917DCF9F}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{56D065F2-982B-4C08-9830-2A6B59AA088A}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -770,16 +770,16 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Mst_CustOtherDetails_Package_new.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Mst_CustOtherDetails_Package.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{1494863A-5E5F-49E9-8284-CDB5C421D7FC}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{5279734F-DFB2-46D5-8C9F-E3C198A3C34B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Mst_CustOtherDetails_Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">12</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{92564E72-A14A-4E2B-9210-A81306EDDD42}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{0BEF325A-F7B9-4005-8754-301057C80B31}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
