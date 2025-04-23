@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="172 17 130 216 Sonata_Dec   Source"
+  DTS:DTSID="{76B4EB6B-C839-4138-AA4D-A2557E66B45C}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=172.17.130.216;User ID=SFPL_Santosh;Initial Catalog=Sonata_Dec;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{76B4EB6B-C839-4138-AA4D-A2557E66B45C}172.17.130.207.Paymee_DigvijayS;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnzV1x+a3tkOF7phK3L4RbQAAAAACAAAAAAAQZgAAAAEAACAAAAB3Sr6UFuHR8c0Ss0PffQt2eIpzOddkuK2C1UoV4Bey3wAAAAAOgAAAAAIAACAAAACfTAYxRUoE3aSMd1uA627OgqpJfjPT12ZK4EHgjpYB4oAAAABSfqcA7pJ1aAzMdC04+4ASOHp2V8c4XmQnQeQhkXvcOhMU8BDDJ7+B5Xol0uPr2gEk3a1RV9nf3QcInUhmFNDWNEgHjVXri4vLhFGIvMtyhOGlSvCIKipmFVPtvR/Fp2y2w1mcdMWlo29xkN1mi3QzeCbeRj3z8UI2gmFx3b8WOEAAAABfHL3L10xh9VBJWmDk/m+m1IBKrZINZrMzIC8WFoFUmTzP5UxLHxDtLkcpYYBq2SDzZ5tcUkHlkt48Ly2PpCow</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

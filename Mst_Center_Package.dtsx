@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Mst_Center_Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{C940C61E-3344-4245-9FD1-786E40937C4F}">
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{3A104C68-2FB0-458D-87D5-CDC6E91319A1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -1130,7 +1130,7 @@ where [refTable].[CenterId] = ?</property>
                 <connection
                   refId="Package\Extract and Load Data\OLE DB Source.Connections[OleDbConnection]"
                   connectionManagerID="{76B4EB6B-C839-4138-AA4D-A2557E66B45C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[172.17.130.207.Paymee_DigvijayS Source]"
+                  connectionManagerRefId="Project.ConnectionManagers[172 17 130 216 Sonata_Dec   Source]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2159,21 +2159,20 @@ where [refTable].[CenterId] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Inner Join Staging to Destination"
+      DTS:refId="Package\Inner Join Staging to Destination 1"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{bb8ca26d-2352-443d-9a00-aebdeac47689}"
+      DTS:DTSID="{e99a42ad-fa56-4e1a-94c2-16a41870e68b}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Inner Join Staging to Destination"
+      DTS:ObjectName="Inner Join Staging to Destination 1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
-          SQLTask:SqlStatementSource="UPDATE D&#xA;SET &#xA;    D.CenterId = S.CenterId,&#xA;    D.BranchId = S.BranchId,&#xA;    D.StaffId_Org = S.StaffId_Org,&#xA;    D.CRTId = S.CRTId,&#xA;    D.StaffId_Recg = S.StaffId_Recg,&#xA;    D.Centercode = S.Centercode,&#xA;    D.CenterName = S.CenterName,&#xA;    D.Block = S.Block,&#xA;    D.FormationDate = S.FormationDate,&#xA;    D.CenterMeetingDay = S.CenterMeetingDay,&#xA;    D.CenterMeetingTime = S.CenterMeetingTime,&#xA;    D.ReportingDay = S.ReportingDay,&#xA;    D.DissolvedDate = S.DissolvedDate,&#xA;    D.Address = S.Address,&#xA;    D.Village = S.Village,&#xA;    D.PostalCode = S.PostalCode,&#xA;    D.LandMark = S.LandMark,&#xA;    D.LocationStatus = S.LocationStatus,&#xA;    D.IsActive = S.IsActive,&#xA;    D.CreatedDate = S.CreatedDate,&#xA;    D.UpdatedDate = S.UpdatedDate,&#xA;    D.CreatedBy = S.CreatedBy,&#xA;    D.UpdatedBy = S.UpdatedBy,&#xA;    D.EntryDetails = S.EntryDetails,&#xA;    D.ProcessDate = S.ProcessDate,&#xA;    D.NewEmpId = S.NewEmpId,&#xA;    D.FinalTransfer = S.FinalTransfer,&#xA;    D.OldStaffID = S.OldStaffID&#xA;FROM [dbo].[Mst_Center] D&#xA;INNER JOIN [dbo].[Staging_Mst_Center] S&#xA;    ON D.CenterId = S.CenterId;&#xA;"
-          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="UPDATE D&#xA;SET &#xA;    D.BranchId = S.BranchId,&#xA;    D.StaffId_Org = S.StaffId_Org,&#xA;    D.CRTId = S.CRTId,&#xA;    D.StaffId_Recg = S.StaffId_Recg,&#xA;    D.Centercode = S.Centercode,&#xA;    D.CenterName = S.CenterName,&#xA;    D.Block = S.Block,&#xA;    D.FormationDate = S.FormationDate,&#xA;    D.CenterMeetingDay = S.CenterMeetingDay,&#xA;    D.CenterMeetingTime = S.CenterMeetingTime,&#xA;    D.ReportingDay = S.ReportingDay,&#xA;    D.DissolvedDate = S.DissolvedDate,&#xA;    D.Address = S.Address,&#xA;    D.Village = S.Village,&#xA;    D.PostalCode = S.PostalCode,&#xA;    D.LandMark = S.LandMark,&#xA;    D.LocationStatus = S.LocationStatus,&#xA;    D.IsActive = S.IsActive,&#xA;    D.CreatedDate = S.CreatedDate,&#xA;    D.UpdatedDate = S.UpdatedDate,&#xA;    D.CreatedBy = S.CreatedBy,&#xA;    D.UpdatedBy = S.UpdatedBy,&#xA;    D.EntryDetails = S.EntryDetails,&#xA;    D.ProcessDate = S.ProcessDate,&#xA;    D.NewEmpId = S.NewEmpId,&#xA;    D.FinalTransfer = S.FinalTransfer,&#xA;    D.OldStaffID = S.OldStaffID&#xA;FROM [dbo].[Mst_Center] D&#xA;INNER JOIN [dbo].[Staging_Mst_Center] S&#xA;    ON D.CenterId = S.CenterId;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -2228,11 +2227,11 @@ where [refTable].[CenterId] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{007dcba8-194e-46f4-96eb-7db1a47fe857}"
-      DTS:From="Package\Extract and Load Data"
+      DTS:DTSID="{8AE0EA52-5006-497F-B4A0-E81D0B3B1566}"
+      DTS:From="Package\Inner Join Staging to Destination 1"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\Inner Join Staging to Destination" />
+      DTS:To="Package\End Log for ETL Execution" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
@@ -2244,11 +2243,11 @@ where [refTable].[CenterId] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
-      DTS:DTSID="{c995a7e1-35b2-4205-95db-96b459d7e729}"
-      DTS:From="Package\Inner Join Staging to Destination"
+      DTS:DTSID="{614C9557-26AF-43F3-B37A-0B6D816FC67D}"
+      DTS:From="Package\Extract and Load Data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
-      DTS:To="Package\End Log for ETL Execution" />
+      DTS:To="Package\Inner Join Staging to Destination 1" />
   </DTS:PrecedenceConstraints>
   <DTS:EventHandlers>
     <DTS:EventHandler
@@ -2318,10 +2317,6 @@ where [refTable].[CenterId] = ?</property>
           Id="Package\Extract and Load Data"
           TopLeft="84.166665346258,211.233332281676" />
         <NodeLayout
-          Size="228.8,41.6"
-          Id="Package\Inner Join Staging to Destination"
-          TopLeft="60,295.299998363753" />
-        <NodeLayout
           Size="205.6,41.6"
           Id="Package\Start Log for ETL Execution"
           TopLeft="68.472221759321,60" />
@@ -2352,28 +2347,6 @@ where [refTable].[CenterId] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="174.683332673129,252.833332281676">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42.4666660820775"
-              Start="0,0"
-              End="0,34.9666660820775">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.9666660820775" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="173.019443894275,101.6">
           <EdgeLayout.Curve>
@@ -2395,20 +2368,58 @@ where [refTable].[CenterId] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="228.8,41.6"
+          Id="Package\Inner Join Staging to Destination 1"
+          TopLeft="65.833333014614,310.677778527097" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="173.049999863406,336.899998363753">
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="294.633333014614,331.477778527097">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33.3777790423785"
+              EndConnector="-21.733333287802,59.5999988790354"
               Start="0,0"
-              End="0,25.8777790423785">
+              End="-14.233333287802,59.5999988790354">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.8777790423785" />
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,55.5999988790354" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,55.5999988790354"
+                    Point2="22.5,59.5999988790354"
+                    Point3="18.5,59.5999988790354" />
+                  <mssgle:LineSegment
+                    End="-14.233333287802,59.5999988790354" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="177.599999180436,252.833332281676">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.8444462454206"
+              Start="0,0"
+              End="0,50.3444462454206">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.3444462454206" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2438,6 +2449,10 @@ where [refTable].[CenterId] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="152,41.6"
+          Id="Package\Extract and Load Data\OLE DB Source"
+          TopLeft="433.999993532896,48.9999992698431" />
+        <NodeLayout
           Size="171.2,41.6"
           Id="Package\Extract and Load Data\OLE DB Destination"
           TopLeft="297.499983745317,272.999998101592" />
@@ -2445,10 +2460,6 @@ where [refTable].[CenterId] = ?</property>
           Size="112.8,41.6"
           Id="Package\Extract and Load Data\Lookup"
           TopLeft="447.999975822867,150.233332326876" />
-        <NodeLayout
-          Size="152,41.6"
-          Id="Package\Extract and Load Data\OLE DB Source"
-          TopLeft="433.999993532896,48.9999992698431" />
         <NodeLayout
           Size="154.4,41.6"
           Id="Package\Extract and Load Data\OLE DB Staging"
@@ -2563,6 +2574,19 @@ where [refTable].[CenterId] = ?</property>
     </LayoutInfo>
   </DtsEventHandler>
   <PipelineComponentMetadata
+    design-time-name="Package\Extract and Load Data\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Extract and Load Data\OLE DB Destination">
     <Properties>
       <Property>
@@ -2581,7 +2605,7 @@ where [refTable].[CenterId] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2591,23 +2615,10 @@ where [refTable].[CenterId] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract and Load Data\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
