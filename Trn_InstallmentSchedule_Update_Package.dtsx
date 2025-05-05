@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{F4D583BA-42F0-43DA-8F0F-0D8852042A58}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{A6829FFE-8C89-40B6-90ED-B35AEC7B978D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -1329,7 +1329,7 @@ ORDER BY Ist.BranchId, Ist.DisbursementId, Ist.InstallmentId;</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
-          SQLTask:SqlStatementSource="UPDATE T  &#xA;SET T.PrincipleCollected = S.PrincipleCollected,  &#xA;    T.InterestCollected = S.InterestCollected,  &#xA;    T.ModeOfPayment = S.ModeOfPayment,&#xA;    T.collecteddate=S.collecteddate,&#xA;    T.partialcollecteddate=S.partialcollecteddate,&#xA;FROM  [dbo].[Trn_InstallmentSchedule]T  &#xA;JOIN [dbo].[Staging_Trn_InstallmentSchedule] S  &#xA;    ON T.InstallScheduleId= S.InstallScheduleId ;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA;UPDATE T  &#xA;SET T.PrincipleCollected = S.PrincipleCollected,  &#xA;    T.InterestCollected = S.InterestCollected,  &#xA;    T.ModeOfPayment = S.ModeOfPayment,&#xA;    T.collecteddate=S.collecteddate,&#xA;    T.partialcollecteddate=S.partialcollecteddate&#xA;FROM  [dbo].[Trn_InstallmentSchedule] T  &#xA;JOIN [dbo].[Staging_Trn_InstallmentSchedule] S  &#xA;    ON T.InstallScheduleId= S.InstallScheduleId ;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
