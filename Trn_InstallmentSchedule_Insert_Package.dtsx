@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Trn_InstallmentSchedule_Insert_Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="37"
-  DTS:VersionGUID="{1B48B4FB-D3F9-4420-9041-9C4D9D941D15}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{FB1FE5C0-1A27-4459-A555-E908B9C7E10C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -641,7 +641,7 @@ ORDER BY Ist.BranchId, Ist.DisbursementId, Ist.InstallmentId;</property>
                 <connection
                   refId="Package\Extract and Load Data\OLE DB Source.Connections[OleDbConnection]"
                   connectionManagerID="{76B4EB6B-C839-4138-AA4D-A2557E66B45C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[172.17.130.207.Paymee_DigvijayS Source]"
+                  connectionManagerRefId="Project.ConnectionManagers[172 17 130 216 Sonata_Dec   Source]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1614,13 +1614,13 @@ ORDER BY Ist.BranchId, Ist.DisbursementId, Ist.InstallmentId;</property>
           Id="Package\Extract and Load Data\OLE DB Destination"
           TopLeft="382.499979101122,235.733331694073" />
         <NodeLayout
-          Size="152,41.6"
-          Id="Package\Extract and Load Data\OLE DB Source"
-          TopLeft="389.833329279389,38.5999993421634" />
-        <NodeLayout
           Size="112.8,41.6"
           Id="Package\Extract and Load Data\Lookup"
           TopLeft="414.666644310786,131.166665792797" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Extract and Load Data\OLE DB Source"
+          TopLeft="389.833329279389,38.5999993421634" />
         <EdgeLayout
           Id="Package\Extract and Load Data.Paths[OLE DB Source Output]"
           TopLeft="468.449986795088,80.1999993421634">
@@ -1696,19 +1696,6 @@ ORDER BY Ist.BranchId, Ist.DisbursementId, Ist.InstallmentId;</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract and Load Data\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Extract and Load Data\Lookup">
     <Properties>
       <Property>
@@ -1728,6 +1715,19 @@ ORDER BY Ist.BranchId, Ist.DisbursementId, Ist.InstallmentId;</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract and Load Data\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

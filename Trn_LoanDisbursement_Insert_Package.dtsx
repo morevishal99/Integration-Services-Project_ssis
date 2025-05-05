@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Trn_LoanDisbursement_Insert_Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="64"
-  DTS:VersionGUID="{7B6B4123-02AD-4964-ABFD-EFD748C5F504}">
+  DTS:VersionBuild="65"
+  DTS:VersionGUID="{2344FA19-69CF-4988-AD51-FE053C0AF74A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -1670,9 +1670,9 @@ where [refTable].[DisbursementID] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT * 
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
 FROM Trn_LoanDisbursement
-WHERE DisbursementDate = CONVERT(VARCHAR, DATEADD(DAY, -1, GETDATE()), 23)</property>
+WHERE is_active=1 and ( Actualpaiddate is null or Actualpaiddate &gt;= DATEADD(d,-1, Convert(date,GETDATE())))</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -1699,7 +1699,7 @@ WHERE DisbursementDate = CONVERT(VARCHAR, DATEADD(DAY, -1, GETDATE()), 23)</prop
                 <connection
                   refId="Package\Extract and Load Data\OLE DB Source.Connections[OleDbConnection]"
                   connectionManagerID="{76B4EB6B-C839-4138-AA4D-A2557E66B45C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[172.17.130.207.Paymee_DigvijayS Source]"
+                  connectionManagerRefId="Project.ConnectionManagers[172 17 130 216 Sonata_Dec   Source]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2989,6 +2989,10 @@ WHERE DisbursementDate = CONVERT(VARCHAR, DATEADD(DAY, -1, GETDATE()), 23)</prop
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="152,41.6"
+          Id="Package\Extract and Load Data\OLE DB Source"
+          TopLeft="433.999993532896,48.9999992698431" />
+        <NodeLayout
           Size="171.2,41.6"
           Id="Package\Extract and Load Data\OLE DB Destination"
           TopLeft="420.833310340014,272.133331440952" />
@@ -2996,10 +3000,6 @@ WHERE DisbursementDate = CONVERT(VARCHAR, DATEADD(DAY, -1, GETDATE()), 23)</prop
           Size="112.8,41.6"
           Id="Package\Extract and Load Data\Lookup"
           TopLeft="447.999975822867,150.233332326876" />
-        <NodeLayout
-          Size="152,41.6"
-          Id="Package\Extract and Load Data\OLE DB Source"
-          TopLeft="433.999993532896,48.9999992698431" />
         <EdgeLayout
           Id="Package\Extract and Load Data.Paths[OLE DB Source Output]"
           TopLeft="507.199984677882,90.5999992698431">
@@ -3062,6 +3062,19 @@ WHERE DisbursementDate = CONVERT(VARCHAR, DATEADD(DAY, -1, GETDATE()), 23)</prop
     </LayoutInfo>
   </DtsEventHandler>
   <PipelineComponentMetadata
+    design-time-name="Package\Extract and Load Data\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Extract and Load Data\OLE DB Destination">
     <Properties>
       <Property>
@@ -3080,7 +3093,7 @@ WHERE DisbursementDate = CONVERT(VARCHAR, DATEADD(DAY, -1, GETDATE()), 23)</prop
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3090,23 +3103,10 @@ WHERE DisbursementDate = CONVERT(VARCHAR, DATEADD(DAY, -1, GETDATE()), 23)</prop
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract and Load Data\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

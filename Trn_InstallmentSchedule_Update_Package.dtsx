@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{1B2E72AF-90F7-4F66-AE36-DD326D674050}">
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{F4D583BA-42F0-43DA-8F0F-0D8852042A58}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -347,7 +347,7 @@ ORDER BY Ist.BranchId, Ist.DisbursementId, Ist.InstallmentId;</property>
                 <connection
                   refId="Package\Extract and Load Data\OLE DB Source.Connections[OleDbConnection]"
                   connectionManagerID="{76B4EB6B-C839-4138-AA4D-A2557E66B45C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[172.17.130.207.Paymee_DigvijayS Source]"
+                  connectionManagerRefId="Project.ConnectionManagers[172 17 130 216 Sonata_Dec   Source]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1184,6 +1184,18 @@ ORDER BY Ist.BranchId, Ist.DisbursementId, Ist.InstallmentId;</property>
                       cachedName="ModeOfPayment"
                       externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ModeOfPayment]"
                       lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[ModeOfPayment]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[CollectedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CollectedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollectedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[CollectedDate]" />
+                    <inputColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].Columns[PartialCollectedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PartialCollectedDate"
+                      externalMetadataColumnId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[PartialCollectedDate]"
+                      lineageId="Package\Extract and Load Data\OLE DB Source.Outputs[OLE DB Source Output].Columns[PartialCollectedDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1251,6 +1263,14 @@ ORDER BY Ist.BranchId, Ist.DisbursementId, Ist.InstallmentId;</property>
                       refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[ModeOfPayment]"
                       dataType="i4"
                       name="ModeOfPayment" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[CollectedDate]"
+                      dataType="dbTimeStamp"
+                      name="CollectedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and Load Data\OLE DB Staging.Inputs[OLE DB Destination Input].ExternalColumns[PartialCollectedDate]"
+                      dataType="dbTimeStamp"
+                      name="PartialCollectedDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1309,7 +1329,7 @@ ORDER BY Ist.BranchId, Ist.DisbursementId, Ist.InstallmentId;</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4E6D6A5A-2821-49A4-A943-2F79FD3A9FB9}"
-          SQLTask:SqlStatementSource="&#xA;UPDATE T  &#xA;SET T.PrincipleCollected = S.PrincipleCollected,  &#xA;    T.InterestCollected = S.InterestCollected,  &#xA;    T.ModeOfPayment = S.ModeOfPayment&#xA;FROM  [dbo].[Trn_InstallmentSchedule]T  &#xA;JOIN [dbo].[Staging_Trn_InstallmentSchedule] S  &#xA;    ON T.InstallScheduleId= S.InstallScheduleId ;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="UPDATE T  &#xA;SET T.PrincipleCollected = S.PrincipleCollected,  &#xA;    T.InterestCollected = S.InterestCollected,  &#xA;    T.ModeOfPayment = S.ModeOfPayment,&#xA;    T.collecteddate=S.collecteddate,&#xA;    T.partialcollecteddate=S.partialcollecteddate,&#xA;FROM  [dbo].[Trn_InstallmentSchedule]T  &#xA;JOIN [dbo].[Staging_Trn_InstallmentSchedule] S  &#xA;    ON T.InstallScheduleId= S.InstallScheduleId ;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1630,10 +1650,6 @@ ORDER BY Ist.BranchId, Ist.DisbursementId, Ist.InstallmentId;</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Extract and Load Data\OLE DB Staging"
-          TopLeft="399.166644857162,234.866665033433" />
-        <NodeLayout
           Size="152,41.6"
           Id="Package\Extract and Load Data\OLE DB Source"
           TopLeft="389.833329279389,38.5999993421634" />
@@ -1641,6 +1657,10 @@ ORDER BY Ist.BranchId, Ist.DisbursementId, Ist.InstallmentId;</property>
           Size="112.8,41.6"
           Id="Package\Extract and Load Data\Lookup"
           TopLeft="414.666644310786,131.166665792797" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Extract and Load Data\OLE DB Staging"
+          TopLeft="399.166644857162,234.866665033433" />
         <EdgeLayout
           Id="Package\Extract and Load Data.Paths[OLE DB Source Output]"
           TopLeft="468.449986795088,80.1999993421634">
@@ -1702,6 +1722,14 @@ ORDER BY Ist.BranchId, Ist.DisbursementId, Ist.InstallmentId;</property>
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract and Load Data\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Extract and Load Data\Lookup">
     <Properties>

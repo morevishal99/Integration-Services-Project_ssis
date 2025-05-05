@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{71D65280-8A73-4C44-B37A-9A010529B5DD}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{79AC0E10-4C36-4421-9B33-3B2E6B899B23}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -351,9 +351,9 @@ where [refTable].[DisbursementID] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT * 
-FROM Trn_LoanDisbursement  
-WHERE (ActualPaidDate is null or ActualPaidDate = CONVERT(VARCHAR, DATEADD(DAY, -1, GETDATE()), 23))</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
+FROM Trn_LoanDisbursement
+WHERE is_active=1 and ( Actualpaiddate is null or Actualpaiddate &gt;= DATEADD(d,-1, Convert(date,GETDATE())))</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -380,7 +380,7 @@ WHERE (ActualPaidDate is null or ActualPaidDate = CONVERT(VARCHAR, DATEADD(DAY, 
                 <connection
                   refId="Package\Extract and Load Data\OLE DB Source.Connections[OleDbConnection]"
                   connectionManagerID="{76B4EB6B-C839-4138-AA4D-A2557E66B45C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[172.17.130.207.Paymee_DigvijayS Source]"
+                  connectionManagerRefId="Project.ConnectionManagers[172 17 130 216 Sonata_Dec   Source]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2034,17 +2034,39 @@ WHERE (ActualPaidDate is null or ActualPaidDate = CONVERT(VARCHAR, DATEADD(DAY, 
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Extract and Load Data\OLE DB Staging"
-          TopLeft="323.69045850481,269.285712413135" />
+          Size="152,41.6"
+          Id="Package\Extract and Load Data\OLE DB Source"
+          TopLeft="323.999999543031,43.7999993060033" />
         <NodeLayout
           Size="112.8,41.6"
           Id="Package\Extract and Load Data\Lookup"
           TopLeft="342.166648272012,148.499999005596" />
         <NodeLayout
-          Size="152,41.6"
-          Id="Package\Extract and Load Data\OLE DB Source"
-          TopLeft="323.999999543031,43.7999993060033" />
+          Size="154.4,41.6"
+          Id="Package\Extract and Load Data\OLE DB Staging"
+          TopLeft="323.69045850481,269.285712413135" />
+        <EdgeLayout
+          Id="Package\Extract and Load Data.Paths[OLE DB Source Output]"
+          TopLeft="399.283323907521,85.3999993060033">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.0999996995928"
+              Start="0,0"
+              End="0,55.5999996995928">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5999996995928" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Extract and Load Data.Paths[Lookup Match Output]"
           TopLeft="399.728553388411,190.099999005596">
@@ -2067,28 +2089,6 @@ WHERE (ActualPaidDate is null or ActualPaidDate = CONVERT(VARCHAR, DATEADD(DAY, 
             <mssgm:EdgeLabel
               BoundingBox="-48.19138671875,30.0381692037696,96.3827734375,11.609375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extract and Load Data.Paths[OLE DB Source Output]"
-          TopLeft="399.283323907521,85.3999993060033">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63.0999996995928"
-              Start="0,0"
-              End="0,55.5999996995928">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.5999996995928" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
